@@ -10,7 +10,7 @@ Jelenleg az autó kölcsönzés személyesen történik, sok papírmunkával já
 
 ## 3. Vágyálom rendszer
 ---
-
+A projekt célja, hogy egy olyan alkalmazást fejlesszünk, ami megkönnyíti a jármű berlési folyamatát. Az alkalmazás Android rendszeren lesz elérhető. A felhasználó az alkalmazás letöltését és megnyitását követően találkozik a felhasználói felülettel. A felhasználói felület egyszerű, letisztult/felhasználóbarát kivitelezésű. A felhasználó egy folyamatosan bővülő kinálatból választhat számára megfelelő járművet, a választás segítése céljából a rendszer tárolni fog minden járműről egy leírást. Az alkalmazás használójának lehetősége van, hogy szűrje a kinálatot, ha már van egy elképzelése a kívánt járműről. Amennyiben a felhasználó megtalálta a számára megfelelő járművet, kitölti a szükséges adatokat akkor egy kis idő elteltével már használatba is veheti a járművet. Továbbá lehetősége lesz értékelés adására, így ha a felhasználó meg volt elégedve a szolgáltatás minőségével, akkor azt jelezheti a készítők és a további felhasználók számára.
 
 ## 4. Funkcionális követelmények
 ---
