@@ -18,7 +18,8 @@ A projekt célja, hogy egy olyan alkalmazást fejlesszünk, ami megkönnyíti a 
 
 ## 5. Rendszerre vonatkozó törvények, szabványok, ajánlások
 ---
-
+- A képek .jpg vagy .png kiterjesztésűek lesznek
+- GDPR-nak való megfelelés
 
 ## 6. Jelenlegi üzleti folyamatok modellje
 ---
