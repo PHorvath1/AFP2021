@@ -14,7 +14,12 @@ A projekt célja, hogy egy olyan alkalmazást fejlesszünk, ami megkönnyíti a 
 
 ## 4. Funkcionális követelmények
 ---
-
+A alkalmazás a következő funkciókat kell, hogy biztosítsa:
+- Járművek listázása
+- Jármű adatainak kiírása
+- Járművek szűrése
+- Bérlési igény elküldése
+- Értékelés lehetősége
 
 ## 5. Rendszerre vonatkozó törvények, szabványok, ajánlások
 ---
