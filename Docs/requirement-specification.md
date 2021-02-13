@@ -6,7 +6,7 @@ Az álltalunk fejlesztett telefonos applikácíó a jármű bérlést hivatott e
 
 ## 2. Jelenlegi helyzet
 ---
-
+Jelenleg az autó kölcsönzés személyesen történik, sok papírmunkával jár, valamint nem kényelmesen intézhető. Az információk helyben derülnek ki, helyszín nem választható, csak a megadott helyen intézhető. Az ügyfelek és a járművek adminisztrációs feladata bonyolult, nehezen átlátható. Az ügyfél nem látja, hogy milyen opciók elérhetőek, csak ha már személyesen ott van. Ez sok ideig tart és az ügyfél nem biztos, hogy talál számára megfelelő járművet.
 
 ## 3. Vágyálom rendszer
 ---
