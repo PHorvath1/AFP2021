@@ -2,7 +2,7 @@
 
 ## 1. Áttekintés
 ---
-Az álltalunk fejlesztett telefonos applikácíó a jármű bérlést hivatott egyszerüsíteni. Az alkalmazás Android operációs renszerrel rendelkező okostelefonokon érhető el. Az Autó kölcsönző kínálata csoportokra van bontva kivitel szerint (Limuzin,SUV,Kombi,Kupé) és az összes gépkocsihoz részletes leírás tartozik(Teljesítmény, Automata/Manuális), a leendő ügyfél ezek közül választhat. Mikor kliensünk sikeresen kiválaszotta, a számára megfelelő járművet, csak annyi dolga van, hogy rá klikkel az autóra megdaja a számlázási adatait, azt hogy hány napra kivánja kibérelni az autót illetve, hogy hol szeretné átvenni.
+Az általunk fejlesztett telefonos applikácíó a jármű bérlést hivatott egyszerüsíteni. Az alkalmazás Android operációs renszerrel rendelkező okostelefonokon érhető el. Az Autó kölcsönző kínálata csoportokra van bontva kivitel szerint (Limuzin,SUV,Kombi,Kupé) és az összes gépkocsihoz részletes leírás tartozik(Teljesítmény, Automata/Manuális), a leendő ügyfél ezek közül választhat. Mikor kliensünk sikeresen kiválaszotta, a számára megfelelő járművet, csak annyi dolga van, hogy rá klikkel az autóra, megdaja a számlázási adatait, azt hogy hány napra kivánja kibérelni az autót illetve, hogy hol szeretné átvenni.
 
 ## 2. Jelenlegi helyzet
 ---
@@ -36,6 +36,17 @@ A alkalmazás a következő funkciókat kell, hogy biztosítsa:
 
 ## 8. Követelménylista
 ---
+| modul| id | név | verzió | kifejtés | 
+| --- | ---: | --- | --- | --- |
+|Jogosultság|K1|Bejelentkezési Felület|1.0|A Bejelentkezési felület segítségével léphet be a felhasználó a rendszerbe miután megadta a emailcím és jelszó kombinációt. Amennyiben a jelszó nem mgfelelő vagy a felhasználó nem regisztrált a rendszer hiba üzenetet küld vissza.|
+|Jogosultság|K2|Regisztrációs felület|1.0|A Regisztrációs felület segítségével csatlakozhat a renszerhez a felhasználó. A regisztrációhoz szükséges megadni e-mail címet, nevet,lakcímet és telefonszámot. A jelszavak kódolva kerülnek tárolásra az adatbázisban.|
+|Modifikáció|K3|Jelszó módosítás|1.0|A Felhasználónak lehetősége van módosítani jelszavát, amennyiben rendelkezik a régi jelszavával. |
+|Felület|K4|Android - Bejelentkezés|1.0|Az applikáció futtatásakor ez a felület fogadja a felhasználókat. A renszer igénybevételéhez a bejelentkezés elengedhetetlen.|
+|Felület|K5|Android - Jelszó módosítás|1.0|A Kliens oldalon a menüből elérhető a "Saját adatok" nézet. Ezen nézeten lesz lehetőség a jelszó módosítására.| 
+|Felület|K6| Android - Menu bar|1.0|A Kliens oldalon szükséges egy menüsor, amely lehetővé teszi a navigálást az Applikáción belül(View közötti váltást teszi lehetővé).|
+|Felület|K7|Andoid View - Járművek Kilistázása|1.0|A nézeten belül elérhető egy almenü(az almenü elemei: Kupé,Kombi,SUV...), ennek segítségével lehet kiválasztani a jármű típusát, majd a kategórába tartozó járművek kilistázásra kerülnek(Clickable Recycler View segítségével).|
+|Felület|K8|Android View - Saját Adatok|1.0|Ez a nézet a felhasználó adatainak kilistázására szolgál, a felhasználó itt tud jelszót módosítani, illetve kijelentkeznia rendszerből.|
+|Felület|K9|Andoid View - Kibérelt Járművek|1.0|A Felhasználó által kibérelt autók kilistázására  szolgál. Megjeleníti a járművet és a bérlés kezdetét és végét.|
 
 
 ## 9. Riportok
