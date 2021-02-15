@@ -28,7 +28,7 @@ A alkalmazás a következő funkciókat kell, hogy biztosítsa:
 
 ## 6. Jelenlegi üzleti folyamatok modellje
 ---
-
+![Image](https://github.com/PHorvath1/AFP2021/blob/main/Pictures/use_case_model.jpg)
 
 ## 7. Igényelt üzleti folyamatok
 ---
