@@ -51,7 +51,30 @@ A alkalmazás a következő funkciókat kell, hogy biztosítsa:
 
 ## 9. Riportok
 ---
+Kérdeőív az járműbérlő alkalmazás fejlesztéséhez
 
+Kérem, hogy a sikeres fejlesztés érdekében a legjobb tudomása szerint válaszoljon az alábbi kérdésekre.
+Amennyiben kérdése van, nyugodtan tegye fel a kérdező biztosnak. Együttműködését előre is köszönjük!
+
+1. Milyen előnyöket nyújt Ön szerint az járműbérlő alkalmazás?
+
+    Egy ilyen alkalmazással elérhetőbbé válik az autóbérlő szolgáltatásunk. Ez alatt azt értem, hogy vásárlóink
+    nem csak a szomszédos falvakból, városokból, hanem akár szomszédos megyékből is eljöhetnek. Továbbá mivel 
+    ezzel az alkalmazással a vásárlók a teljes kínálatot megtekinthetik, így már az érkezésük előtt 
+    eldönthetik, hogy melyik járművet szeretnék bérbe venni.
+
+2. Milyen funkciókat vár el ettől az alkalmazástól?
+
+    Mindenképp szeretném látni a kínálatot, csoportokra bontva. Egy termékünkre nyomva kiírja annak adatait.
+    Továbbá kell, hogy legyen egy adat kitöltő űrlap, melyet kitöltve és elküldve valamilyen visszajelzést kap
+    a vásárló. Végül szeretném, hogy lehetőség legyen felhasználói fiókok létrehozására, melyek további
+    szolgáltatásokat nyújtanak.
+
+3. Milyen további funkciókat látna szívesen az alkalmazásban?
+
+    Jó lenne, ha lehetőség lenne termékek csoportokra bontott megjelenítésén kívül további szűrők állnának
+    rendelkezésre, például: név, évjárat. Illetve, szívesen látnám, ha lenne lehetőség a járműbérlő alkalmazást
+    értékelni, mert így a cégünk is és a vásárlók is láthatnánk a visszajelzéseket.
 
 ## 10. Fogalomtár
 ---
