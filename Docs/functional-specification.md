@@ -14,7 +14,7 @@
 
 ## 4. Jelenlegi üzleti folyamatok modellje
 ---
-
+![Image](https://github.com/PHorvath1/AFP2021/blob/main/Pictures/use_case_model.jpg)
 
 ## 5. Igényelt üzleti folyamatok
 ---
