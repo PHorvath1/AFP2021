@@ -55,4 +55,5 @@ A alkalmazás a következő funkciókat kell, hogy biztosítsa:
 
 ## 10. Fogalomtár
 ---
-
+* **Android**: A mobiltelefonokon lévő operációs rendszer.
+* **GDPR**: Európai Unió által kiadott rendelet, amely a személyes adatok kezeléséről szól. 
