@@ -32,7 +32,7 @@ A alkalmazás a következő funkciókat kell, hogy biztosítsa:
 
 ## 7. Igényelt üzleti folyamatok
 ---
-![Image](https://github.com/PHorvath1/AFP2021/blob/main/Pictures/igenyelt_u_folyamat.png)
+![Image](https://github.com/PHorvath1/AFP2021/blob/main/Pictures/igenyelt_uzleti_folyamat.png)
 
 ## 8. Követelménylista
 ---
