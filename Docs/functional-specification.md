@@ -29,7 +29,7 @@
 
 ## 5. Igényelt üzleti folyamatok
 ---
-
+![Image](https://github.com/PHorvath1/AFP2021/blob/main/Pictures/igenyelt_uzleti_folyamat.png)
 
 ## 6. Használati esetek
 ---
