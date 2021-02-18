@@ -41,7 +41,18 @@
 
 ## 8. Forgatókönyv
 ---
-
+István munkaügyben Budapestre utazott, ahol 3 hétig fog egy szállodában lakik. Ez a szálloda Budapest
+külvárosában van, a munkája miatt minden nap a belvárosba kell mennie. István elhatározta, hogy a kényelmesebb 
+utazás érdekében erre a 3 hétre bérel egy autót. Több járműkölcsönzőbe is elment, de vagy az árak voltak 
+magasak, vagy nem is volt olyan jármű, amely megfelelt volna az igényeinek, így ezek a látogatások felesleges 
+időpazarlásnak bizonyúltak. Úton a szállása felé hallotta a buszon, hogy egy megbízható, és jó minőségű köl-
+csönző megnyitotta mobilszolgáltatását. Letöltötte, megnyitotta, majd az alkalmazás a bejelentkezői 
+felületével találkozott. Mivel fiókja nem volt, regisztrálnia kellett. Regisztráció után be tudott jelentkezni,
+ekkor az alkalmazás fő oldalára került. István a navigációs menü Kínálat gombjára nyomva és a kívánt kategória 
+kiválasztásával kilistázta a kategóriába tartozó járműveket. Talált is egy látszólag megfelelő járművet, de nem
+volt biztos benne, hogy az a megfelelő, tehát elolvasta a járműhöz tartozó leírást és most már biztos volt 
+abban, hogy az lesz a megfelelő. Megadta a számlázási adatait, majd 2 nap múlva egy óra utazás után kezébe 
+adták a kulcsot.
 
 ## 9. Fogalomtár
 ---
