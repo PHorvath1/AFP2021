@@ -13,7 +13,7 @@ A felhasználónak lehetősége lesz az adatai megtekintésére, továbbá arra,
 
 ## 2. Jelenlegi helyzet
 ---
-A megrendelő szeretné az autó kölcsönzés menetét gyorsabbá és kényelmesebbé tenni, hogy minél több ember kihasználja a cége által nyújtott lehetőséget. Ezt a mobilapplikáció segítségével képzeli el, mivel sok ember rendelkezik ilyen készülékkel. A rendszerben a járművek kategóriákra vannak bontva és a ügyfél könnyedén kereshet az elérhető járművek közül. A megrendelő szeretné még, hogy a járművek részletes leírással is rendelkezzenek, mivel így az ügyfél sok kérdésére választ kap. Fontos az is, hogy a rendszerben az ügyfél a számlázási adatok megadása után kiválaszthatja, hogy hány napra kívánja kibérelni a járművet és a számára megfelelő helyet, ahol át kívánja venni a járművet. A rendszer a sikeres bérlés után az adminisztrációs feladatokat automatikusan kezeli.
+A megrendelő szeretné az autó kölcsönzés menetét gyorsabbá és kényelmesebbé tenni, hogy minél több ember kihasználja a cége által nyújtott lehetőséget. Ezt a mobilapplikáció segítségével képzeli el, mivel sok ember rendelkezik ilyen készülékkel. A rendszerben a járművek kategóriákra vannak bontva és az ügyfél könnyedén kereshet az elérhető járművek közül. A megrendelő szeretné még, hogy a járművek részletes leírással is rendelkezzenek, mivel így az ügyfél sok kérdésre választ kap. Fontos az is, hogy a rendszerben az ügyfél a számlázási adatok megadása után kiválaszthatja, hogy hány napra kívánja kibérelni a járművet és a számára megfelelő helyet, ahol át kívánja venni a járművet. A rendszer a sikeres bérlés után az adminisztrációs feladatokat automatikusan kezeli.
 
 ## 3. Követelménylista
 ---
