@@ -1,8 +1,15 @@
 ## Funkcionális Specifikáció
 
 ## 1. Áttekintés
----
-
+--- 
+A projekt célja, hogy egy autókölcsönző applikációt fejlesszünk Android rendszerre. Az alkalmazás használatához
+először le kell tölteni azt, majd elindítani. Az alkalmazás felhasználói rendszerrel fog működni, ami azt 
+jelenti, hogy szükséges lesz a regisztrálás és a bejelentkezés a használathoz. Ebben az alkalmazásban egy menü
+segítségével navigálhatunk a felületek között. A kinálat kivitel szerint lesz csoportosítva (Szedán, Kombi, 
+stb.), de használhatunk további szűrőket. Minden járműhöz tartozni fog egy leírás is. A jármű kiválasztása után
+a felhasználónak csak meg kell adni a számlázási adatait, a bérlés időtartamát illetve, hogy hol szeretné 
+átvenni a járművet.
+A felhasználónak lehetősége lesz az adatai megtekintésére, továbbá arra, hogy megváltoztassa a jelszavát.
 
 ## 2. Jelenlegi helyzet
 ---
