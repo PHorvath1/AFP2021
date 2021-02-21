@@ -45,6 +45,14 @@ A megrendelő szeretné az autó kölcsönzés menetét gyorsabbá és kényelme
 
 ## 7. Képernyő tervek
 ---
+![Image](https://github.com/PHorvath1/AFP2021/blob/main/ViewPlans/Rendered/LoginView.png)
+![Image](https://github.com/PHorvath1/AFP2021/blob/main/ViewPlans/Rendered/RegisterView.png)
+![Image](https://github.com/PHorvath1/AFP2021/blob/main/ViewPlans/Rendered/HomeView.png)
+![Image](https://github.com/PHorvath1/AFP2021/blob/main/ViewPlans/Rendered/NavigationView.png)
+![Image](https://github.com/PHorvath1/AFP2021/blob/main/ViewPlans/Rendered/CarlistView.png)
+![Image](https://github.com/PHorvath1/AFP2021/blob/main/ViewPlans/Rendered/CarView.png)
+![Image](https://github.com/PHorvath1/AFP2021/blob/main/ViewPlans/Rendered/MyRentalsView.png)
+
 
 
 ## 8. Forgatókönyv
