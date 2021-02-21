@@ -40,7 +40,8 @@ A megrendelő szeretné az autó kölcsönzés menetét gyorsabbá és kényelme
 
 ## 6. Használati esetek
 ---
-
+* **Felhasználó**: A felhasználó, a sikeres belépés után kilistázhatja az elérhető járműveket, kereshet a járművek között szűrőkkel, megtekintheti a kiválasztott jármű leírását és kibérelheti a járművet. Megtekintheti saját adatait, valamint módosíthatja jelszavát.
+* **Admin**: A rendszer hibamentes működéséért felelős. Az admin szerepkörrel rendelkező felhasználó hozzáfér a rendszer minden funkciójához. Megtekintheti a regisztrált felhasználók által kibérelt járműveket.
 
 ## 7. Képernyő tervek
 ---
