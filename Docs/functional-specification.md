@@ -72,4 +72,5 @@ adták a kulcsot.
 
 ## 9. Fogalomtár
 ---
-
+* **Mobilapplikáció**: Olyan alkalmazás, amely mobiltelefonokon működik.
+* **View**: A mobilalkalmazáson belül egy oldal, amelyen információk jelennek meg. 
