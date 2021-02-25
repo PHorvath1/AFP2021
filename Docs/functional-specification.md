@@ -50,36 +50,36 @@ A megrendelő szeretné az autó kölcsönzés menetét gyorsabbá és kényelme
   <tr>
     <td>
         <H3>Bejelentkezési felület</h3>
-        <image src="https://github.com/PHorvath1/AFP2021/blob/main/ViewPlans/Rendered/LoginView.png" height="50%">
+        <image src="https://github.com/PHorvath1/AFP2021/blob/main/ViewPlans/Rendered/LoginView.png" width="50%">
     </td>
     <td>
     <H3>Regisztációs felület</h3>
-        <image src="https://github.com/PHorvath1/AFP2021/blob/main/ViewPlans/Rendered/RegisterView.png"height="50%"></td>
+        <image src="https://github.com/PHorvath1/AFP2021/blob/main/ViewPlans/Rendered/RegisterView.png" width="50%"></td>
     </td>
     <td>
     <H3>Kezdő felület</h3>
-        <image src="https://github.com/PHorvath1/AFP2021/blob/main/ViewPlans/Rendered/HomeView.png"height="50%">
+        <image src="https://github.com/PHorvath1/AFP2021/blob/main/ViewPlans/Rendered/HomeView.png" width="50%">
     </td>
         
   </tr>
   <tr>
     <td>
         <H3>Navigációs Menü</h3>
-        <image src="https://github.com/PHorvath1/AFP2021/blob/main/ViewPlans/Rendered/NavigationView.png" height="50%">
+        <image src="https://github.com/PHorvath1/AFP2021/blob/main/ViewPlans/Rendered/NavigationView.png" width="50%">
     </td>
     <td>
     <H3>Bérelhető járművek kilistázása</h3>
-        <image src="https://github.com/PHorvath1/AFP2021/blob/main/ViewPlans/Rendered/CarlistView.png" height="50%"></td>
+        <image src="https://github.com/PHorvath1/AFP2021/blob/main/ViewPlans/Rendered/CarlistView.png" width="50%"></td>
     </td>
     <td>
     <H3>Jármű információ és bérlés</h3>
-        <image src="https://github.com/PHorvath1/AFP2021/blob/main/ViewPlans/Rendered/CarView.png" height="50%">
+        <image src="https://github.com/PHorvath1/AFP2021/blob/main/ViewPlans/Rendered/CarView.png" width="50%">
     </td>
   </tr>
   <tr>
     <td>
         <H3>Kibérelt Járművek</h3>
-        <image src="https://github.com/PHorvath1/AFP2021/blob/main/ViewPlans/Rendered/MyRentalView.png" height="50%">
+        <image src="https://github.com/PHorvath1/AFP2021/blob/main/ViewPlans/Rendered/MyRentalsView.png" width="50%">
     </td>
   </tr>
 </table>
