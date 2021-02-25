@@ -45,14 +45,44 @@ A megrendelő szeretné az autó kölcsönzés menetét gyorsabbá és kényelme
 
 ## 7. Képernyő tervek
 ---
-![Image](https://github.com/PHorvath1/AFP2021/blob/main/ViewPlans/Rendered/LoginView.png)
-![Image](https://github.com/PHorvath1/AFP2021/blob/main/ViewPlans/Rendered/RegisterView.png)
-![Image](https://github.com/PHorvath1/AFP2021/blob/main/ViewPlans/Rendered/HomeView.png)
-![Image](https://github.com/PHorvath1/AFP2021/blob/main/ViewPlans/Rendered/NavigationView.png)
-![Image](https://github.com/PHorvath1/AFP2021/blob/main/ViewPlans/Rendered/CarlistView.png)
-![Image](https://github.com/PHorvath1/AFP2021/blob/main/ViewPlans/Rendered/CarView.png)
-![Image](https://github.com/PHorvath1/AFP2021/blob/main/ViewPlans/Rendered/MyRentalsView.png)
 
+<table style="width:100%">
+  <tr>
+    <td>
+        <H3>Bejelentkezési felület</h3>
+        <image src="https://github.com/PHorvath1/AFP2021/blob/main/ViewPlans/Rendered/LoginView.png" height="50%">
+    </td>
+    <td>
+    <H3>Regisztációs felület</h3>
+        <image src="https://github.com/PHorvath1/AFP2021/blob/main/ViewPlans/Rendered/RegisterView.png"height="50%"></td>
+    </td>
+    <td>
+    <H3>Kezdő felület</h3>
+        <image src="https://github.com/PHorvath1/AFP2021/blob/main/ViewPlans/Rendered/HomeView.png"height="50%">
+    </td>
+        
+  </tr>
+  <tr>
+    <td>
+        <H3>Navigációs Menü</h3>
+        <image src="https://github.com/PHorvath1/AFP2021/blob/main/ViewPlans/Rendered/NavigationView.png" height="50%">
+    </td>
+    <td>
+    <H3>Bérelhető járművek kilistázása</h3>
+        <image src="https://github.com/PHorvath1/AFP2021/blob/main/ViewPlans/Rendered/CarlistView.png" height="50%"></td>
+    </td>
+    <td>
+    <H3>Jármű információ és bérlés</h3>
+        <image src="https://github.com/PHorvath1/AFP2021/blob/main/ViewPlans/Rendered/CarView.png" height="50%">
+    </td>
+  </tr>
+  <tr>
+    <td>
+        <H3>Kibérelt Járművek</h3>
+        <image src="https://github.com/PHorvath1/AFP2021/blob/main/ViewPlans/Rendered/MyRentalView.png" height="50%">
+    </td>
+  </tr>
+</table>
 
 
 ## 8. Forgatókönyv
