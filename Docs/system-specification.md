@@ -30,7 +30,7 @@
 
 ## 8. Adatbázis terv
 ---
-
+![Image](https://github.com/PHorvath1/AFP2021/blob/main/Pictures/Database_plan.png)
 
 ## 9. Implementációs terv
 ---
