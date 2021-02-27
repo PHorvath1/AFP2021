@@ -10,7 +10,7 @@
 
 ## 3. Üzleti folyamatok modellje
 ---
-
+![Image](https://github.com/PHorvath1/AFP2021/blob/main/Pictures/igenyelt_uzleti_folyamat.png)
 
 ## 4. Követelmények
 ---
