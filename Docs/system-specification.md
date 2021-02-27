@@ -71,7 +71,23 @@ A projekt backend területét végzők feladata, hogy szolgáltatást készítse
 
 ## 7. Architekturális terv
 ---
+A kliens és a szerver HTTP/HTTPS protokolon keresztül kommunikál egymással.
 
+### Adatbázis:
+- A rendzer adatainak tárolásához szükséges egy Adatbázis, a rendszerhez MySql-t alkalmazunk.
+### Backend:
+- (Opcionális) Composer: Függőségek vezérlése és építése.(Dependency management)
+
+- (Opcionális) Swagger: API-k struktúrájának, illetve a backend által szolgáltatott Endpoint-ok útvonalainak leírására szolgál.
+
+### Android:
+- Grandle: Függőségek kezelése és építése.(Dependency management)
+- Retrofit: REST kliens Java és Android Alkalmazásokhoz, amely lehetővé teszi az egyszerű kommunikációt a kliens és szerver között.
+- Lombok: Getter, Setter , Konstruktor egyszerűsítésére szolgál.
+- JUni5 & Jupiter: Tesztelési keretrendszer a Unit tesztek megírásához.
+- (Opcionális) SLF4: Kivételek, hibák naplozására alkalmazható dependecy.
+
+![Image](https://github.com/PHorvath1/AFP2021/blob/main/Pictures/BackendPlan.png)
 
 ## 8. Adatbázis terv
 ---
