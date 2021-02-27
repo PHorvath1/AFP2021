@@ -67,6 +67,7 @@ A projekt backend területét végzők feladata, hogy szolgáltatást készítse
 
 ## 6. Fizikai környezet
 ---
+Fejlesztői környezet:
 
 
 ## 7. Architekturális terv
@@ -86,6 +87,7 @@ A kliens és a szerver HTTP/HTTPS protokolon keresztül kommunikál egymással.
 - Lombok: Getter, Setter , Konstruktor egyszerűsítésére szolgál.
 - JUni5 & Jupiter: Tesztelési keretrendszer a Unit tesztek megírásához.
 - (Opcionális) SLF4: Kivételek, hibák naplozására alkalmazható dependecy.
+
 
 ![Image](https://github.com/PHorvath1/AFP2021/blob/main/Pictures/BackendPlan.png)
 
