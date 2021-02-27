@@ -67,7 +67,7 @@ A projekt backend területét végzők feladata, hogy szolgáltatást készítse
 
 ## 6. Fizikai környezet
 ---
-### Fejlesztői eszközök:
+Fejlesztői környezet:
 
 - Java, Gradle, Android Studio
 - Visual Studio Code, InteliJ IDEA vagy Net Beans
