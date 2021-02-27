@@ -14,7 +14,18 @@
 
 ## 4. Követelmények
 ---
-
+* **Funkcionális követelmények**:
+    - Felhasználó adatainak tárolása
+    - Jármű adatainak tárolása
+    - Android környezeten való működés
+    - Járművek listázása
+    - Elérhető járművek szűrése
+    - Járművek adatainak megtekintése
+    - Jármű kibérlése
+* **Nem funkcionális követelmény**:
+    - Az alkalmazásnak gyorsnak kell lennie
+    - Az alkalmazás felületének egyszerűnek kell lennie
+    - Navigációs menü kialakítása
 
 ## 5. Funkcionális terv
 ---
