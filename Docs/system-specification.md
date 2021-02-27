@@ -63,7 +63,32 @@ A projekt backend területét végzők feladata, hogy szolgáltatást készítse
 
 ## 5. Funkcionális terv
 ---
+### Ügyfél, a rendszer felhasználója:
+- Felregisztrálhat a renszerre, miután kitöltötte a kötelező Form-okat.
+- E-mail cím és jelszó kombinácíóval, egy validácíó után beléphet a rendszerbe.
+- Az ügyfélnek lehetősége van a Jelszó változtatásra, a Saját adatok(My Profile)
+menüpont alatt.
+- Lehetősége van jármüvet bérelni, sikeres bejelentkezés után a Jármű lista menüpontban(Car List),
+ miután megadt a bérlés kezdetét, végét és az átvétel helyszínét.
+- A Saját bérlések(My Rentals) menüpont alatt, lehetősége van megtekinteni a már kibérelt járműveket.
+- (Opcionális) A Kontakt menüpont alatt felveheti a kapcsolatot a Jármű bérlő üzemeltetőivel,
+ ahhol feltetheti kérdéseit és probléma esetén segítséget kérhet.
 
+### (Opcionális) Admin:
+- Lehetősége van új járműveket hozzáadni a renszerhez.
+- Módosítani tudja a járművek számát
+- Probléma esetén, szabaddá teheti a már lefoglalt járművet. 
+
+### Menü-hierarchiák:
+
+* Bejelentkezés
+    - Bejelentkezés
+    - Regisztráció
+* Menü
+    - Főmenü
+    - Saját bérlések
+    - Saját Profil
+    - Járművek lista
 
 ## 6. Fizikai környezet
 ---
