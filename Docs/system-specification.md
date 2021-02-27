@@ -6,7 +6,41 @@
 
 ## 2. Projektterv
 ---
+#### Projektszerepkörök:
+Scrum master:
+Product Owner:
 
+#### Projektmunkások és felelősségeik:
+Frontend munkálatok:
+    - Csattos Bence
+    - Horváth Krisztián
+    - Horváth Péter
+A projekt frontend részén dolgozók feladata, hogy az alkalmazáshoz egy felhasználói felületet készítsenek.
+
+Backend munkálatok:
+    - Csattos Bence
+    - Horváth Krisztián
+    - Horváth Péter
+A projekt backend területét végzők feladata, hogy szolgáltatást készítsenek, amelyre majd épül az alkalmazás.
+
+| Funkció / Story | Feladat / Taszk | Prioritás | Becslés | Akt. Becslés | Eltelt | Hátralévő |
+| --- | --- | --- | --- | --- | --- | --- |
+| Követelmény Specifikáció |  | 0 | 7 | 7 | 7 | 0 |
+| Funkcionális Specifikáció |  | 0 | 8 | 8 | 8 | 0 |
+| Rendszerterv |  | 0 | 8 | 8 | 3 | 5 |
+| Fejlesztés |  | 0 | 39 | 39 | 0 | 39 |
+|  | Adatbázis létrehozása | 0 | 2 | 2 | 0 | 2 |
+|  | Regiszráció | 0 | 4 | 4 | 0 | 4 |
+|  | Bejelentkezés | 0 | 3 | 3 | 0 | 3 |
+|  | Saját adatok megtekintése | 0 | 3 | 3 | 0 | 3 |
+|  | Jelszó módosítása | 1 | 3 | 3 | 0 | 3 |
+|  | Járművek kilistázása | 0 | 8 | 8 | 0 | 8 |
+|  | Jármű megtekintése | 1 | 4 | 4 | 0 | 4 |
+|  | Kikölcsönzés | 0 | 5 | 5 | 0 | 5 |
+|  | Kikölcsönzött járművek megtekintése | 1 | 4 | 4 | 0 | 4 |
+|  | Értékelés | 2 | 3 | 3 | 0 | 3 |
+| Tesztelés | Teszt jegyzőkönyv | 0 | 5 | 5 | 0 | 5 |
+| Projektvezetés |  | 0 | 12 | 12 | 0 | 12 |
 
 ## 3. Üzleti folyamatok modellje
 ---
