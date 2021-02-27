@@ -67,7 +67,34 @@ A projekt backend területét végzők feladata, hogy szolgáltatást készítse
 
 ## 6. Fizikai környezet
 ---
-Fejlesztői környezet:
+### Fejlesztői eszközök:
+
+- Java, Gradle, Android Studio
+- Visual Studio Code, InteliJ IDEA vagy Net Beans
+- (Opcionális) Android OP. Rendszeres telefon a könnyebb fejlesztés érdekében.
+- Postman 
+- git (Github account) 
+
+### Futtatási környezet:
+Annak érdekében, hogy az ügyfél igénybe tudja venni a renszer  szolgáltatásait, rendelkezni kell
+egy okostelefonnal. Az okostelefonnak meg kell felelnie egyes specifikációknak. 
+
+#### Specifikáció:
+- Android 4.1(Jelly Bean) vagy annál frissebb operációs rendszer.
+- Internet kapcsolat
+- Google Play Áruház 
+- Minimális renszer követelménynek meg kell felelnie.
+
+
+### Minimális Rendszerigény
+| | |
+| --- | --- | 
+| Operációs rendszer |  Android 4.1.4 ,Android 4.2, Android 4.4.2, or Android 4.4.4 |
+|Processzor|Snapdragon 768G vagy Jobb Intel Atom® Processor Z2520 1.2 GHz vagy gyorsabb|
+|Tárhely|Minimum 120MB tárhely |
+|RAM|Minimum 512Mb, Ajánlott 2GB|
+|Internet|Az Applikáió futtatásához internet kapcsolat szükséges|
+
 
 
 ## 7. Architekturális terv
@@ -77,6 +104,8 @@ A kliens és a szerver HTTP/HTTPS protokolon keresztül kommunikál egymással.
 ### Adatbázis:
 - A rendzer adatainak tárolásához szükséges egy Adatbázis, a rendszerhez MySql-t alkalmazunk.
 ### Backend:
+-   (Opcionális) Docker: Konténerizáció biztosítja, ezáltal a  Backend és az Adatbázis könnyen kezelhető és könnyen futtatható minden számítógépes operációs renszeren. Ezzel elkerülhető a hosszadalmas konfigurálás és Renszer kitelepítését is egyszerübbé teszi.
+
 - (Opcionális) Composer: Függőségek vezérlése és építése.(Dependency management)
 
 - (Opcionális) Swagger: API-k struktúrájának, illetve a backend által szolgáltatott Endpoint-ok útvonalainak leírására szolgál.
