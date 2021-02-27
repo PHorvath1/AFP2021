@@ -104,7 +104,9 @@ A kliens és a szerver HTTP/HTTPS protokolon keresztül kommunikál egymással.
 ### Adatbázis:
 - A rendzer adatainak tárolásához szükséges egy Adatbázis, a rendszerhez MySql-t alkalmazunk.
 ### Backend:
--   (Opcionális) Docker: Konténerizáció biztosítja, ezáltal a  Backend és az Adatbázis könnyen kezelhető és könnyen futtatható minden számítógépes operációs renszeren. Ezzel elkerülhető a hosszadalmas konfigurálás és Renszer kitelepítését is egyszerübbé teszi.
+-   (Opcionális) Docker: Konténerizáció biztosítja, ezáltal a  Backend és az Adatbázis
+    könnyen kezelhető és könnyen futtatható minden számítógépes operációs renszeren. 
+    Ezzel elkerülhető a hosszadalmas konfigurálás és Renszer kitelepítését is egyszerübbé teszi.
 
 - (Opcionális) Composer: Függőségek vezérlése és építése.(Dependency management)
 
