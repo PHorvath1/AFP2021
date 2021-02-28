@@ -179,4 +179,9 @@ Amennyiben az előfeltételek teljesülnek, akkor a következő lépésekkel tel
 
 ## 12. Karbantartási terv
 ---
-
+Az alkalmazás karbantartására időről időre sor fog kerülni, amely tartalmazza a programhibák javítását,
+az alkalmazás hosszútávú müködése érdekében végzett módosításokat, frissítéseket, esetlegesen új funkciók hozzáadását
+és az alkalmazás teljesítménybeli fejlesztését, a környezeti feltételek változása miatt megfogalmazott program- illetve
+állomány módosítási feltételeket. Új Android verzió kiadása esetén ellenőrizni kell, hogy az alkalmazás kompatibilis-e
+az új verzióval. Amennyiben az alkalmazás használhatatlanságát okozó hibát találunk, a lehető leghamarabb elkezdjük 
+annak javítását.
