@@ -161,7 +161,21 @@ A kliens és a szerver HTTP/HTTPS protokolon keresztül kommunikál egymással.
 
 ## 11. Telepítési terv
 ---
+Az alkalmazás telepítése a következőképpen fog zajlani:
 
+Az alkalmazás telepítése előtt meg kell győzödni a telepítési előfeltételek teljesüléséről. Ezen
+előfeltételek megtekinthetők a rendszerterv "Fizikai környezet" 
+* Futtatási környezet
+* Specifikáció
+* Minimális rendszerigény
+alpontjaiban.
+
+Amennyiben az előfeltételek teljesülnek, akkor a következő lépésekkel telepíthető az alkalmazás:
+1. Rákeres az alkalmazás nevére a Google Play áruházban
+2. Rábök a megfelelő alkalmazás ikonjára
+3. Ellenőrzi, hogy a megfelelő alkalmazást nyomta meg
+4. Elindítja a letöltést
+5. A letöltés befejeztével a telepítés automatikusan megtörténik
 
 ## 12. Karbantartási terv
 ---
