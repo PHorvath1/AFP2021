@@ -157,7 +157,22 @@ A kliens és a szerver HTTP/HTTPS protokolon keresztül kommunikál egymással.
 
 ## 10. Teszt terv
 ---
+**Tesztelési eljárások**
+* **Unit teszt:**
+    A metódusok működésének ellenőrzése céljából unit teszteket kell írni. A metódusoknak át kell mennie a teszteken,
+    hogy késznek tekinthetők legyenek.
+* **Alfa teszt:**
+    Az alfa tesztet a fejlesztők végzik. A alfa teszt célja, hogy teszteljük a már meglévő funkciókat, hogy azok az
+    elvártnak megfelelően működnek-e. A teszt akkor tekinthető sikeresnek, ha különböző Android rendszereken minden funkció megfelelően működik.
 
+**Tesztelendő funkciók**
+* **Backend Service:**
+    Képesnek kell lennie több klienst egyidőben kiszolgálni.
+    Képesnek kell lennie, az adatbázisban műveleteket végezni (hozzáadni, törölni, módosítani).
+* **Android:**
+    A bejelentkezési és regisztrációs felületnek elérhetőnek kell lennie, minden felhasználó számára. Az alkalmazás
+    elindításakor a bejelentkezési felület jelenik meg. Ezen a felületen kell belépni az adatok megadásával. 
+    Nem létező fiók esetén, hibát kell kapni. Sikeres bejelentkezés esetén, a felhasználónak el kell érnie a funkciókat.
 
 ## 11. Telepítési terv
 ---
