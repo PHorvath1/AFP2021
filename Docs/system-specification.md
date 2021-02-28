@@ -153,7 +153,12 @@ A kliens és a szerver HTTP/HTTPS protokolon keresztül kommunikál egymással.
 
 ## 9. Implementációs terv
 ---
-
+Az alkalmazás Android operációs rendszerre készül Android Studioban, Java nyelvben. Ezen kívül a következő
+technológiákat fogjuk használni:
+- A kommunikáció HTTP/HTPPS protokoll segítségével zajlik a szerver és a kliens között.
+- A backend fejlesztése PHP nyelv formájában fog megvalósulni, a lekérdezésekhez MySql-t használunk.
+- A kliens a szolgáltatást egy REST API segítségével éri el.
+- A Unit tesztek megírására JUni5-t és Jupiter-t használunk.
 
 ## 10. Teszt terv
 ---
