@@ -2,7 +2,14 @@
 
 ## 1. A rendszer célja
 ---
-
+A Renszer célja, hogy a felhasználó/ügyfél kényelmesen és egyszerűen tudjon járművet bérelni. 
+Az alkalmazás megvalósítása során törekedni kell arra, hogy a felhasználói felület minél letisztultabb legyen,
+a félre értések elkerülése és áttekithetőség érdekében. Az ügyfél jármű lista széles választéka közül válogathat.
+Azért, hogy a keresés egyszerű és gördülékeny legyen, a járműveket a renszer csoportokba rendezi majd listázza ki.
+A felhasználónak lehetősége van a már általa kibérelt járművek megtekitésére a Saját bérlések menüpont alatt.
+Továbbá ezen menüpont alatt tájkozódhat a bérlés időtartamáról és a szolgáltatás díjairól.
+A renszer kifejezetten csak Androidos eszközökön érhető el. A fejleszés során nem célunk más Operációs renszerrel
+renelkező eszközre is fejleszteni.
 
 ## 2. Projektterv
 ---
@@ -92,7 +99,7 @@ menüpont alatt.
 
 ## 6. Fizikai környezet
 ---
-Fejlesztői környezet:
+### Fejlesztői környezet:
 
 - Java, Gradle, Android Studio
 - Visual Studio Code, InteliJ IDEA vagy Net Beans
