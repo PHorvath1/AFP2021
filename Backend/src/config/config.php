@@ -1,13 +1,21 @@
 <?php 
 
-$host = 'db'; // service name from docker-compose.yml
-$user = 'devuser';
-$password = 'devpass';
-$db =  'rental_db';
+class dbObj{
+    var $host = 'db'; // service name from docker-compose.yml
+    var $user = 'devuser';
+    var $password = 'devpass';
+    var $db = 'rental_db';
+    var $conn;
 
-$conn = new mysqli($host,$user,$password,$db);
-if($conn->connect_error){
-    echo 'connection failed' . $conn->connect_error;
-    exit;
-}
-echo 'Succesfully connected to MySQL';
+    function getConnection(){
+        $con = mysqli_connect($this->host,$this->user,$this->password,$this->db);
+        if(mysqli_connect_errno()){
+            echo 'Connection failed, ' . mysqli_connect_error();
+            exit;
+        }
+        echo 'Succesfully connected to MySQL';
+        $conn = $con;
+        return $this->conn;
+    }
+}    
+?>
