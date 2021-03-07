@@ -8,13 +8,15 @@ class dbObj{
     var $conn;
 
     function getConnection(){
-        $con = mysqli_connect($this->host,$this->user,$this->password,$this->db);
+        $con = mysqli_connect($this->host,$this->user,$this->password,$this->db) or die("Connection failed: ".mysqli_connect_error());
         if(mysqli_connect_errno()){
             echo 'Connection failed, ' . mysqli_connect_error();
             exit;
         }
-        echo 'Succesfully connected to MySQL';
-        $conn = $con;
+        else {
+            echo 'Succesfully connected to MySQL';
+            $this->conn = $con;
+        }
         return $this->conn;
     }
 }    
