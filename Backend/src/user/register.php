@@ -22,7 +22,7 @@
         $password = $post_vars['Password'];
         $address = $post_vars['Address'];
         $phone_number = $post_vars['PhoneNumber'];
-        $query = "INSERT INTO users (name,email,password,address,phone_number) VALUES ($name, $email, $password, $address, $phone_number)";
+        $query = "INSERT INTO users SET name = '".$name."', email = '".$email."', password = '".$password."', address = '".$address."', phone_number = ".$phone_number." ";
         if (mysqli_query($con, $query)) {
             $response = "Sikeres regisztráció";
         } else {
