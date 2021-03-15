@@ -17,11 +17,11 @@
     function register(){
         global $con;
         $post_vars = json_decode(file_get_contents("php://input"),true);
-        $name = $post_vars['Name'];
-        $email = $post_vars['Email'];
-        $password = $post_vars['Password'];
-        $address = $post_vars['Address'];
-        $phone_number = $post_vars['PhoneNumber'];
+        $name = $post_vars['name'];
+        $email = $post_vars['email'];
+        $password = $post_vars['password'];
+        $address = $post_vars['address'];
+        $phone_number = $post_vars['phonenumber'];
         $query = "INSERT INTO users SET name = '".$name."', email = '".$email."', password = '".$password."', address = '".$address."', phone_number = ".$phone_number." ";
         if (mysqli_query($con, $query)) {
             $response = "Sikeres regisztráció";

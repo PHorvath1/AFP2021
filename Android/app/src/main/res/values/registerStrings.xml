@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="registerUserName">Name</string>
+    <string name="registerUserPhonenumber">Phone number</string>
+    <string name="registerUserAddress">Address</string>
+    <string name="registerUserEmail">E-mail</string>
+    <string name="registerUserPassword">Password</string>
+    <string name="registerRegisterButton">Submit</string>
+    <string name="registerBackButton">Back</string>
+
+</resources>

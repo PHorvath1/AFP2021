@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Views.Register">
+
+
+    <LinearLayout
+        android:layout_width="410dp"
+        android:layout_height="543dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.845">
+
+
+        <TextView
+            android:id="@+id/registerUserEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/registerUserEmail" />
+
+        <EditText
+            android:id="@+id/registerUserEmailField"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="" />
+
+        <TextView
+            android:id="@+id/registerUserPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/registerUserPassword" />
+
+        <EditText
+            android:id="@+id/registerUserPasswordField"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPassword" />
+
+        <TextView
+            android:id="@+id/registerUserName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/registerUserName" />
+
+        <EditText
+            android:id="@+id/registerUserNameField"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName" />
+
+        <TextView
+            android:id="@+id/registerUserAddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/registerUserAddress" />
+
+        <EditText
+            android:id="@+id/registerUserAddressField"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName" />
+
+        <TextView
+            android:id="@+id/registerUserPhonenumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/registerUserPhonenumber" />
+
+        <EditText
+            android:id="@+id/registerUserPhonenumberField"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName"/>
+
+        <Button
+            android:id="@+id/registerSubmit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/registerRegisterButton" />
+
+        <Button
+            android:id="@+id/registerBack"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/registerBackButton" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
