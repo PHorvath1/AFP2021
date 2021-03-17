@@ -14,7 +14,7 @@ class dbObj{
             exit;
         }
         else {
-            echo 'Succesfully connected to MySQL';
+            //echo 'Succesfully connected to MySQL';
             $this->conn = $con;
         }
         return $this->conn;

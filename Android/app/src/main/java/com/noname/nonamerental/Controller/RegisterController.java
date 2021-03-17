@@ -1,5 +1,7 @@
 package com.noname.nonamerental.Controller;
 
+import android.widget.EditText;
+
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.noname.nonamerental.Model.UserRegisterData;
@@ -13,19 +15,18 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class RegisterController {
 
-    static Gson gson = new GsonBuilder()
+    private static Gson gson = new GsonBuilder()
             .setLenient()
             .create();
 
-    static Retrofit retrofit = new Retrofit.Builder()
+    private static Retrofit retrofit = new Retrofit.Builder()
             .baseUrl("http://10.0.2.2:8000/")
             .addConverterFactory(GsonConverterFactory.create(gson))
             .build();
 
-    static JsonPlaceHolderApi jsonPlaceHolderApi = retrofit.create(JsonPlaceHolderApi.class);
+    private static JsonPlaceHolderApi jsonPlaceHolderApi = retrofit.create(JsonPlaceHolderApi.class);
 
     public static void RegisterUser(UserRegisterData user) {
-
         Call<UserRegisterData> call = jsonPlaceHolderApi.CreateUser(user);
 
         call.enqueue(new Callback<UserRegisterData>() {
@@ -46,4 +47,6 @@ public class RegisterController {
             }
         });
     }
+
+
 }

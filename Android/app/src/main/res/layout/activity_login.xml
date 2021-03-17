@@ -24,12 +24,13 @@
             android:text="@string/loginUserEmail" />
 
         <EditText
-            android:id="@+id/editTextTextPersonName"
+            android:id="@+id/loginUserEmailField"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
             android:inputType="textPersonName"
-            android:text="Name" />
+            android:text="admin@gmail.com"
+            />
 
         <TextView
             android:id="@+id/loginUserPassword"
@@ -38,11 +39,13 @@
             android:text="@string/loginPassword" />
 
         <EditText
-            android:id="@+id/editTextTextPassword"
+            android:id="@+id/loginUserPasswordField"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:inputType="textPassword" />
+            android:inputType="textPassword"
+            android:text="admin"
+            />
 
         <Button
             android:id="@+id/loginLoginButton"
