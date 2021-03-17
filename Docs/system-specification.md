@@ -14,21 +14,21 @@ renelkező eszközre is fejleszteni.
 ## 2. Projektterv
 ---
 #### Projektszerepkörök:
-Scrum master:
-Product Owner:
+<br> Scrum master: Gulyás Péter
+<br> Product Owner: Tóth István
 
 #### Projektmunkások és felelősségeik:
-Frontend munkálatok:
-    - Csattos Bence
-    - Horváth Krisztián
-    - Horváth Péter
-A projekt frontend részén dolgozók feladata, hogy az alkalmazáshoz egy felhasználói felületet készítsenek.
+<br>Frontend munkálatok:
+<br>    - Csattos Bence
+<br>    - Horváth Krisztián
+<br>    - Horváth Péter
+<br>A projekt frontend részén dolgozók feladata, hogy az alkalmazáshoz egy felhasználói felületet készítsenek.
 
-Backend munkálatok:
-    - Csattos Bence
-    - Horváth Krisztián
-    - Horváth Péter
-A projekt backend területét végzők feladata, hogy szolgáltatást készítsenek, amelyre majd épül az alkalmazás.
+<br>Backend munkálatok:
+<br>    - Csattos Bence
+<br>    - Horváth Krisztián
+<br>    - Horváth Péter
+<br>A projekt backend területét végzők feladata, hogy szolgáltatást készítsenek, amelyre majd épül az alkalmazás.
 
 | Funkció / Story | Feladat / Taszk | Prioritás | Becslés | Akt. Becslés | Eltelt | Hátralévő |
 | --- | --- | --- | --- | --- | --- | --- |
