@@ -31,7 +31,7 @@
             android:layout_height="wrap_content"
             android:ems="10"
             android:inputType="textPersonName"
-            android:text="" />
+            android:text="Enter your E-mail here" />
 
         <TextView
             android:id="@+id/registerUserPassword"
@@ -44,7 +44,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:inputType="textPassword" />
+            android:inputType="textPassword"
+            android:text="Password" />
 
         <TextView
             android:id="@+id/registerUserName"
@@ -57,7 +58,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:inputType="textPersonName" />
+            android:inputType="textPersonName"
+            android:text="Enter your Name here" />
 
         <TextView
             android:id="@+id/registerUserAddress"
@@ -70,29 +72,32 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:inputType="textPersonName" />
+            android:inputType="textPersonName"
+            android:text="Enter your Address here" />
 
         <TextView
             android:id="@+id/registerUserPhonenumber"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/registerUserPhonenumber" />
+            android:text="@string/registerUserPhonenumber"
+            />
 
         <EditText
             android:id="@+id/registerUserPhonenumberField"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:inputType="textPersonName"/>
+            android:inputType="textPersonName"
+            android:text="(20) 416 7988"/>
 
         <Button
-            android:id="@+id/registerSubmit"
+            android:id="@+id/registerSubmitButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/registerRegisterButton" />
 
         <Button
-            android:id="@+id/registerBack"
+            android:id="@+id/registerBackButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/registerBackButton" />
