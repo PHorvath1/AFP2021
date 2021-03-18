@@ -28,7 +28,7 @@
         }
 
         global $con;
-        $query = "SELECT id, brand, type FROM rental_db.cars WHERE quantity > 0";
+        $query = "SELECT id, brand, type, image FROM rental_db.cars WHERE quantity > 0";
         $response = array();
         $result = mysqli_query($con, $query);
         while ($row=mysqli_fetch_array($result)) {
