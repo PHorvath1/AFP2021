@@ -35,7 +35,15 @@
 
 <image src="https://github.com/PHorvath1/AFP2021/blob/main/Pictures/InteliJSetup/InteliJDatabaseSetup.png" width="50%" />
 
+### Backend funkciók
 
+| Kérés típus | Hely | Válasz | 
+| --- | --- | --- |
+| GET | localhost:8000/user/login.php?{email}&{password} | status |
+| POST | localhost:8000/user/register.php | string |
+| GET | localhost:8000/user/profile.php?{uid} | status,id,name,email,address,phone_number |
+| GET | localhost:8000/user/cars/?{uid} | Az összes elérhető jármű: id,brand,type,image |
+| GET | localhost:8000/user/cars/?{uid}&{carId} | Az kiválasztott jármű: id,brand,type,category,image,description,price,quantity |
 
 
   
