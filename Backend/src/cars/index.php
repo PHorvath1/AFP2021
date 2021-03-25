@@ -15,7 +15,10 @@
                 listAvaibleCars($uid);
             }
             break;
-        
+        case 'UPDATE':
+            $uid = $_GET['uid'];
+            $carId = $_GET['carId'];
+            rentCar($uid, $carId);
         default:
             break;
     }
@@ -70,4 +73,31 @@
 
     }
 
+    function rentCar($uid, $carId) {
+        if (empty($uid)) {
+            $response = "Jelentkezzen be a funkció használatához!";
+            echo json_encode($response);
+            return;
+        }
+
+        global $con;
+        $query = "UPDATE cars SET quantity = quantity-1 WHERE id=".$carId." AND quantity>0 LIMIT 1";
+        $response = "error";
+        if (mysqli_query($con, $query)) {
+            if (moveToRentedCars($uid, $carId)) {
+                $response = "success";
+            }
+        }
+        echo json_encode($response);
+    }
+
+    function moveToRentedCars($uid, $carId) {
+        global $con;
+        $query = "INSERT INTO rented_cars SET uid=".$uid.", cid=".$carId.", rental_time='".date('m/d/Y',time())."', price=0";
+        if (mysqli_query($con, $query)) {
+            return true;
+        }
+        return false;
+    }
+    
 ?>
