@@ -93,11 +93,26 @@
 
     function moveToRentedCars($uid, $carId) {
         global $con;
-        $query = "INSERT INTO rented_cars SET uid=".$uid.", cid=".$carId.", rental_time='".date('m/d/Y',time())."', price=0";
+        $dateNow = date('Y-m-d',time());
+        $rentTime = empty($_GET['rentTime']) ? 1 : $_GET['rentTime'];
+        $date = strtotime("+".$rentTime." days", $dateNow);
+        $price = getCarPrice($carId);
+        $query = "INSERT INTO rented_cars SET uid=".$uid.", cid=".$carId.", rental_time=".$date.", price=".$price/$rentTime;
         if (mysqli_query($con, $query)) {
             return true;
         }
         return false;
+    }
+
+    function getCarPrice($carId) {
+        global $con;
+        $query = "SELECT price FROM cars WHERE id =".$carId;
+        $response = array();
+        $result = mysqli_query($con, $query);
+        while ($row=mysqli_fetch_array($result)) {
+            $response[] = $row;
+        }
+        return response['price'];
     }
     
 ?>
