@@ -1,7 +1,10 @@
 package com.noname.nonamerental.Controller;
 
+import com.noname.nonamerental.Model.CarResponse;
 import com.noname.nonamerental.Model.Status;
 import com.noname.nonamerental.Model.UserRegisterData;
+
+import java.util.List;
 
 import retrofit2.Call;
 import retrofit2.http.Body;
@@ -16,6 +19,9 @@ public interface JsonPlaceHolderApi {
     @GET("user/login.php")
     Call<Status> LoginUser(@Query("email") String email,
                            @Query("password") String password);
+
+    @GET("cars/index.php")
+    Call<List<CarResponse>> ListCars(@Query("uid") int id);
 
 
 }
