@@ -12,9 +12,9 @@
         android:theme="@style/Theme.NonameRental"
         android:usesCleartextTraffic="true"
         >
-        <activity android:name=".Views.Register"></activity>
+        <activity android:name=".Views.Register"/>
         <activity android:name=".MainActivity" />
-        <activity android:name=".Views.Login">
+        <activity android:name=".Views.Login" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
