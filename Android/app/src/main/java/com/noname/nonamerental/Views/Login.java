@@ -85,7 +85,7 @@ public class Login extends AppCompatActivity {
 
                 if(response.body().getStatus().equals(success)){
                     System.out.println("Status check is correct");
-                    startActivity(new Intent(Login.this,Home.class));
+                    startActivity(new Intent(Login.this, MainActivity.class));
                 }
                 else{
                     System.out.println("Wrong Password or Email");
