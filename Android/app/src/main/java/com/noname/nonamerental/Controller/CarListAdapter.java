@@ -1,6 +1,7 @@
 package com.noname.nonamerental.Controller;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.content.res.Resources;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -28,6 +29,8 @@ import java.util.List;
 
 public class CarListAdapter extends RecyclerView.Adapter<CarListAdapter.CarListViewHolder> {
     private List<CarResponse> data;
+    private int itemPosition;
+    private final View.OnClickListener carOnClickListener = new CarOnClickListener();
     public CarListAdapter(List<CarResponse> data) {
         this.data = data;
     }
@@ -37,12 +40,14 @@ public class CarListAdapter extends RecyclerView.Adapter<CarListAdapter.CarListV
     public CarListAdapter.CarListViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         LayoutInflater inflater = LayoutInflater.from(parent.getContext());
         View view = inflater.inflate(R.layout.car_card, parent, false);
+        view.setOnClickListener(carOnClickListener);
         return new CarListViewHolder(view);
     }
 
     @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     @Override
     public void onBindViewHolder(final CarListAdapter.CarListViewHolder holder, int position) {
+        itemPosition = position;
         String brand = data.get(position).getBrand();
         String type = data.get(position).getType();
 
@@ -70,5 +75,6 @@ public class CarListAdapter extends RecyclerView.Adapter<CarListAdapter.CarListV
             carModel = (TextView) itemView.findViewById(R.id.car_model);
         }
     }
+    
 }
 
