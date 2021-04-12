@@ -24,14 +24,14 @@ import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 public class CarList extends AppCompatActivity {
-    private List<CarResponse> cars;
+    private static List<CarResponse> cars;
 
     private Button btnCoupe;
     private Button btnKombi;
     private Button btnSUV;
     private Button btnSedan;
 
-    private RecyclerView carRecyclerView;
+    private static RecyclerView carRecyclerView;
 
 
     private static Gson gson = new GsonBuilder()
@@ -44,6 +44,14 @@ public class CarList extends AppCompatActivity {
             .build();
 
     private static JsonPlaceHolderApi jsonPlaceHolderApi = retrofit.create(JsonPlaceHolderApi.class);
+
+    public static RecyclerView getCarRecyclerView(){
+        return carRecyclerView;
+    }
+
+    public static CarResponse getCar(int position){
+        return cars.get(position);
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -76,6 +84,5 @@ public class CarList extends AppCompatActivity {
                 System.out.println("Hiba a járművek lekárdezésekor...");
             }
         });
-
     }
 }
