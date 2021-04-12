@@ -23,6 +23,7 @@
         </activity>
         <activity android:name=".Views.Home"/>
         <activity android:name=".Views.CarList"/>
+        <activity android:name=".Views.CarView"/>
     </application>
 
 </manifest>
