@@ -25,7 +25,7 @@ public interface JsonPlaceHolderApi {
     Call<List<CarResponse>> ListCars(@Query("uid") int id);
 
     @GET("cars/index.php")
-    Call<Car> GetCarInfo(@Query("uid") int id,
+    Call<List<Car>> GetCarInfo(@Query("uid") int id,
                          @Query("carId") int cid);
 
 }

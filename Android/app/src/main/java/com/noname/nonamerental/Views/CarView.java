@@ -15,6 +15,8 @@ import com.noname.nonamerental.Controller.JsonPlaceHolderApi;
 import com.noname.nonamerental.Model.Car;
 import com.noname.nonamerental.R;
 
+import java.util.List;
+
 import lombok.SneakyThrows;
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -24,7 +26,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class CarView extends AppCompatActivity {
 
-    private Car data;
+    private List<Car> data;
     private int position;
     private Button btnRent;
     private Button btnBack;
@@ -74,26 +76,26 @@ public class CarView extends AppCompatActivity {
     }
 
     public void getCarInfo(int uid, int cid){
-
-        Call<Car> car = jsonPlaceHolderApi.GetCarInfo(uid, cid);
-        car.enqueue(new Callback<Car>() {
+        Call<List<Car>> car = jsonPlaceHolderApi.GetCarInfo(uid, cid);
+        car.enqueue(new Callback<List<Car>>() {
             @SneakyThrows
             @Override
-            public void onResponse(Call<Car> call, Response<Car> response) {
+            public void onResponse(Call<List<Car>> call, Response<List<Car>> response) {
                 data = response.body();
-                ivCar.setImageResource(getApplicationContext().getResources().getIdentifier(data.getImage(),"mipmap",getApplicationContext().getPackageName()));
-                String temp = data.getBrand()+' '+data.getType();
+                System.out.println(data.get(0));
+                ivCar.setImageResource(getApplicationContext().getResources().getIdentifier(data.get(0).getImage(),"mipmap",getApplicationContext().getPackageName()));
+                String temp = data.get(0).getBrand()+' '+data.get(0).getType();
                 tvName.setText(temp);
-                tvDescription.setText(data.getDescription());
-                tvPrice.setText(data.getPrice());
+                tvDescription.setText(data.get(0).getDescription());
+                tvPrice.setText(String.valueOf(data.get(0).getPrice()));
             }
 
             @Override
-            public void onFailure(Call<Car> call, Throwable t) {
+            public void onFailure(Call<List<Car>> call, Throwable t) {
                 System.out.println("Hiba a jármű megtekintésekor...");
+                System.out.println(t.getMessage());
             }
         });
-
     }
 
 }
