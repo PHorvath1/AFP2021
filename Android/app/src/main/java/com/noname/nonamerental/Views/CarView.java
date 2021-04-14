@@ -1,7 +1,9 @@
 package com.noname.nonamerental.Views;
 
+import android.content.Intent;
 import android.media.Image;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -66,12 +68,29 @@ public class CarView extends AppCompatActivity {
         tvName = findViewById(R.id.tvCarName);
         tvDescription = findViewById(R.id.tvCarDescription);
         tvPrice = findViewById(R.id.tvCarPrice);
+        btnBack = findViewById(R.id.btnBack);
+        btnRent = findViewById(R.id.btnRentCar);
         try {
             getCarInfo(1, position);
 
         } catch (Exception e) {
             System.out.println(e.getMessage());
         }
+
+        btnRent.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(CarView.this, CarRent.class));
+            }
+        });
+
+        btnBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(CarView.this, CarList.class));
+            }
+        });
+
 
     }
 
