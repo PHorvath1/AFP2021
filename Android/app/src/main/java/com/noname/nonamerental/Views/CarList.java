@@ -76,7 +76,7 @@ public class CarList extends AppCompatActivity {
             @Override
             public void onResponse(Call<List<CarResponse>> call, Response<List<CarResponse>> response) {
                 cars = response.body();
-                carRecyclerView.setAdapter(new CarListAdapter(cars));
+                carRecyclerView.setAdapter(new CarListAdapter(cars,CarList.this));
             }
 
             @Override

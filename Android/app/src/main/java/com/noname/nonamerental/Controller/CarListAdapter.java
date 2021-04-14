@@ -1,5 +1,6 @@
 package com.noname.nonamerental.Controller;
 
+import android.content.Context;
 import android.os.Build;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -19,9 +20,11 @@ import java.util.List;
 public class CarListAdapter extends RecyclerView.Adapter<CarListAdapter.CarListViewHolder> {
     private List<CarResponse> data;
     private int itemPosition;
+    private Context context;
     private final View.OnClickListener carOnClickListener = new CarOnClickListener();
-    public CarListAdapter(List<CarResponse> data) {
+    public CarListAdapter(List<CarResponse> data, Context context) {
         this.data = data;
+        this.context = context;
     }
 
     @NonNull
@@ -39,12 +42,11 @@ public class CarListAdapter extends RecyclerView.Adapter<CarListAdapter.CarListV
         itemPosition = position;
         String brand = data.get(position).getBrand();
         String type = data.get(position).getType();
-
-
+        int image = context.getResources().getIdentifier(data.get(position).getImage(),"mipmap", context.getPackageName());
 
         holder.carBrand.setText(brand);
         holder.carModel.setText(type);
-        holder.carImage.setImageDrawable(holder.carImage.getContext().getDrawable(R.drawable.ic_launcher_foreground));
+        holder.carImage.setImageResource(image);
     }
 
     @Override
