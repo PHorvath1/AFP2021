@@ -12,16 +12,15 @@
         android:theme="@style/Theme.NonameRental"
         android:usesCleartextTraffic="true"
         >
-        <activity android:name=".Views.Register"></activity>
-        <activity android:name=".MainActivity" />
-        <activity android:name=".Views.Login">
+        <activity android:name=".Views.Register"/>
+        <activity android:name=".Views.MainActivity" />
+        <activity android:name=".Views.Login" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Views.Home"/>
         <activity android:name=".Views.CarList"/>
         <activity android:name=".Views.CarView"/>
     </application>
