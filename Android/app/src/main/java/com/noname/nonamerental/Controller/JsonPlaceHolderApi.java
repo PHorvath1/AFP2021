@@ -1,5 +1,6 @@
 package com.noname.nonamerental.Controller;
 
+import com.noname.nonamerental.Model.Car;
 import com.noname.nonamerental.Model.CarResponse;
 import com.noname.nonamerental.Model.Status;
 import com.noname.nonamerental.Model.UserRegisterData;
@@ -23,5 +24,8 @@ public interface JsonPlaceHolderApi {
     @GET("cars/index.php")
     Call<List<CarResponse>> ListCars(@Query("uid") int id);
 
+    @GET("cars/index.php")
+    Call<List<Car>> GetCarInfo(@Query("uid") int id,
+                         @Query("carId") int cid);
 
 }
