@@ -15,9 +15,10 @@
     function login($email, $password) {
         global $con;
         $query = "SELECT id FROM rental_db.users WHERE email ='".$email."' AND password='".$password."'";
-        $response = array("status"=>"error");
+        $response = array("id" => -1 , "status"=>"error");
         $result = mysqli_query($con, $query);
         while ($row=mysqli_fetch_array($result)) {
+            $response["id"] = (int)$row["id"] ;
             $response["status"] = "success";
         }
         echo json_encode($response);
