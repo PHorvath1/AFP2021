@@ -12,6 +12,8 @@ import android.view.MenuItem;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
 
 import com.google.android.material.navigation.NavigationView;
@@ -25,12 +27,24 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
     Toolbar toolbar;
     private DrawerLayout drawer;
+    public HomeFragment myHomeFragment;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        //USER ID
+        final int userId = getIntent().getIntExtra("UserId",-1);
+
+
+        //Pre building fragments with data
+        Bundle bundle = new Bundle();
+        bundle.putInt("UserId",userId);
+        myHomeFragment = new HomeFragment();
+        myHomeFragment.setArguments(bundle);
+
+        //Toolbar declaration
         toolbar = findViewById(R.id.toolbar);
         drawer = findViewById(R.id.drawer_layout);
 
@@ -49,7 +63,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         toggle.syncState();
 
         if(savedInstanceState == null) {
-            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new HomeFragment()).commit();
+            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, myHomeFragment).commit();
             navigationView.setCheckedItem(R.id.nav_home);
         }
     }
@@ -60,7 +74,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
         switch (item.getItemId()){
             case R.id.nav_home:
-                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new HomeFragment()).commit();
+
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,myHomeFragment).commit();
                 break;
             case R.id.nav_my_profile:
                 System.out.println("You Opened My rentals");

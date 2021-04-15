@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -12,9 +13,22 @@ import androidx.fragment.app.Fragment;
 import com.noname.nonamerental.R;
 
 public class HomeFragment extends Fragment {
+
+    TextView userIdTextView;
+
+
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_home,container,false);
+
+        final View rootView = inflater.inflate(R.layout.fragment_home,container,false);
+
+        //Data from MainActivity
+        int userId = getArguments().getInt("UserId");
+        userIdTextView = (TextView)rootView.findViewById(R.id.userIdTextView);
+
+
+
+        return rootView;
     }
 }

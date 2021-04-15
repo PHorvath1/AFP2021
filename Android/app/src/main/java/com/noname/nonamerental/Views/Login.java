@@ -82,13 +82,12 @@ public class Login extends AppCompatActivity {
             public void onResponse(Call<Status> call, Response<Status> response) {
 
                 final String success = "success";
+                final int userId = response.body().getId();
 
                 if(response.body().getStatus().equals(success)){
                     System.out.println("Status check is correct");
 
-                   
-
-                    startActivity(new Intent(Login.this,CarList.class));
+                    startActivity(new Intent(Login.this,MainActivity.class).putExtra("UserId",userId));
 
                 }
                 else{

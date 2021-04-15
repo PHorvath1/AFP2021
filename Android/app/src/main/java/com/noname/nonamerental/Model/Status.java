@@ -7,7 +7,7 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 public class Status {
-
+    private int id;
     private String status;
 
 }
