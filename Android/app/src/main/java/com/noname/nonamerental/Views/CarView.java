@@ -29,7 +29,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 public class CarView extends AppCompatActivity {
 
     private List<Car> data;
-    private int position;
+    private int itemPosition;
     private Button btnRent;
     private Button btnBack;
     private ImageView ivCar;
@@ -37,16 +37,7 @@ public class CarView extends AppCompatActivity {
     private TextView tvDescription;
     private TextView tvPrice;
 
-    public CarView(int position){
-
-        this.position = position;
-
-    }
-
     public CarView(){
-
-        this.position = 1;
-
     }
 
     private static Gson gson = new GsonBuilder()
@@ -64,6 +55,7 @@ public class CarView extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_carview);
+        itemPosition = getIntent().getIntExtra("carId",1);
         ivCar = findViewById(R.id.ivCar);
         tvName = findViewById(R.id.tvCarName);
         tvDescription = findViewById(R.id.tvCarDescription);
@@ -71,7 +63,7 @@ public class CarView extends AppCompatActivity {
         btnBack = findViewById(R.id.btnBack);
         btnRent = findViewById(R.id.btnRentCar);
         try {
-            getCarInfo(1, position);
+            getCarInfo(1, itemPosition);
 
         } catch (Exception e) {
             System.out.println(e.getMessage());
@@ -87,7 +79,7 @@ public class CarView extends AppCompatActivity {
         btnBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(CarView.this, CarList.class));
+                startActivity(new Intent(CarView.this, MainActivity.class));
             }
         });
 
