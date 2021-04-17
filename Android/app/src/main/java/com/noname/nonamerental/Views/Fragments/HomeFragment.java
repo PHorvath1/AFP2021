@@ -25,7 +25,7 @@ public class HomeFragment extends Fragment {
 
         //Data from MainActivity
         int userId = getArguments().getInt("UserId");
-        userIdTextView = (TextView)rootView.findViewById(R.id.userIdTextView);
+
 
 
 
