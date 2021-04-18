@@ -44,6 +44,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         myHomeFragment = new HomeFragment();
         myHomeFragment.setArguments(bundle);
 
+
         //Toolbar declaration
         toolbar = findViewById(R.id.toolbar);
         drawer = findViewById(R.id.drawer_layout);
