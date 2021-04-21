@@ -91,7 +91,7 @@ public class CarListFragment extends Fragment {
 
             @Override
             public void onFailure(Call<List<CarResponse>> call, Throwable t) {
-                System.out.println("Hiba a járművek lekárdezésekor...");
+                System.out.println("Hiba a járművek lekérdezésekor...");
             }
         });
     }
