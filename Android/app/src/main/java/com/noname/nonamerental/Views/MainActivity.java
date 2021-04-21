@@ -28,6 +28,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     Toolbar toolbar;
     private DrawerLayout drawer;
     public HomeFragment myHomeFragment;
+    private MyProfileFragment myProfileFragment;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,6 +44,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         bundle.putInt("UserId",userId);
         myHomeFragment = new HomeFragment();
         myHomeFragment.setArguments(bundle);
+        myProfileFragment = new MyProfileFragment();
+        myProfileFragment.setArguments(bundle);
 
 
         //Toolbar declaration
@@ -79,8 +82,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,myHomeFragment).commit();
                 break;
             case R.id.nav_my_profile:
-                System.out.println("You Opened My rentals");
-                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new MyProfileFragment()).commit();
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, myProfileFragment).commit();
                 break;
             case R.id.nav_my_rentals:
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new MyRentalsFragment()).commit();

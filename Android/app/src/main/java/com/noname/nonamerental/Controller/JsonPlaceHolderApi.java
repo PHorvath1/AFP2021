@@ -3,6 +3,7 @@ package com.noname.nonamerental.Controller;
 import com.noname.nonamerental.Model.Car;
 import com.noname.nonamerental.Model.CarResponse;
 import com.noname.nonamerental.Model.Status;
+import com.noname.nonamerental.Model.UserData;
 import com.noname.nonamerental.Model.UserRegisterData;
 
 import java.util.List;
@@ -20,6 +21,9 @@ public interface JsonPlaceHolderApi {
     @GET("user/login.php")
     Call<Status> LoginUser(@Query("email") String email,
                            @Query("password") String password);
+
+    @GET("user/profile.php")
+    Call<List<UserData>> GetUserData(@Query("uid") int id);
 
     @GET("cars/index.php")
     Call<List<CarResponse>> ListCars(@Query("uid") int id);

@@ -67,8 +67,12 @@ public class HomeFragment extends Fragment  {
         myProfileCard.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Bundle bundle = new Bundle();
+                bundle.putInt("UserId",userId);
+                MyProfileFragment myProfileFragment = new MyProfileFragment();
+                myProfileFragment.setArguments(bundle);
                 try {
-                    getFragmentManager().beginTransaction().replace(R.id.fragment_container, new MyProfileFragment(), "NewFragmentTag").commit();
+                    getFragmentManager().beginTransaction().replace(R.id.fragment_container, myProfileFragment, "NewFragmentTag").commit();
                 }catch (Exception e){
                     System.out.println(e);
                 }
