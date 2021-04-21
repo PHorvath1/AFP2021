@@ -20,12 +20,11 @@
 
     function show($uid) {
         global $con;
-        $query = "SELECT id,name,email,address,phone_number FROM rental_db.users WHERE id =".$uid;
-        $response = array("status"=>"error");
+        $query = "SELECT name,email,address,phone_number FROM rental_db.users WHERE id =".$uid;
+        $response = array();
         $result = mysqli_query($con, $query);
         while ($row=mysqli_fetch_array($result)) {
             $response[] = $row;
-            $response["status"] = "success";
         }
         echo json_encode($response);
     }
