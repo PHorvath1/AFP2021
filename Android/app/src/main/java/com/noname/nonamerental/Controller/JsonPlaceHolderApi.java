@@ -2,16 +2,19 @@ package com.noname.nonamerental.Controller;
 
 import com.noname.nonamerental.Model.Car;
 import com.noname.nonamerental.Model.CarResponse;
+import com.noname.nonamerental.Model.RentedCar;
 import com.noname.nonamerental.Model.Status;
 import com.noname.nonamerental.Model.UserData;
 import com.noname.nonamerental.Model.UserRegisterData;
 
+import java.sql.Date;
 import java.util.List;
 
 import retrofit2.Call;
 import retrofit2.http.Body;
 import retrofit2.http.GET;
 import retrofit2.http.POST;
+import retrofit2.http.PUT;
 import retrofit2.http.Query;
 
 public interface JsonPlaceHolderApi {
@@ -31,5 +34,10 @@ public interface JsonPlaceHolderApi {
     @GET("cars/index.php")
     Call<List<Car>> GetCarInfo(@Query("uid") int id,
                          @Query("carId") int cid);
+
+    @PUT("cars/index.php")
+    Call<RentedCar> RentCar(@Query("uid") int id,
+                            @Query("carId") int cid,
+                            @Query("rental_time") Date date);
 
 }
