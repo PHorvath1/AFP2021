@@ -29,6 +29,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     private DrawerLayout drawer;
     public HomeFragment myHomeFragment;
     private MyProfileFragment myProfileFragment;
+    private CarListFragment carListFragment;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,7 +47,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         myHomeFragment.setArguments(bundle);
         myProfileFragment = new MyProfileFragment();
         myProfileFragment.setArguments(bundle);
-
+        carListFragment = new CarListFragment();
+        carListFragment.setArguments(bundle);
 
         //Toolbar declaration
         toolbar = findViewById(R.id.toolbar);
@@ -88,7 +90,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new MyRentalsFragment()).commit();
                 break;
             case R.id.nav_car_list:
-                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new CarListFragment()).commit();
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, carListFragment).commit();
                 break;
             case R.id.nav_logout:
                 startActivity(new Intent(MainActivity.this,Login.class));

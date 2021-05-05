@@ -58,9 +58,12 @@ public class CarListFragment extends Fragment {
         return cars.get(position);
     }
 
+    private int userId;
+
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+        userId = getArguments().getInt("UserId");
         return inflater.inflate(R.layout.activity_carlist,container,false);
     }
 
@@ -72,8 +75,7 @@ public class CarListFragment extends Fragment {
         carRecyclerView.setLayoutManager(new LinearLayoutManager(view.getContext()));
 
         try {
-            //Ide kéne a belépett felhasználó azonosítója
-            listCars(2);
+            listCars(userId);
         } catch (Exception e) {
             System.out.println(e.getMessage());
         }

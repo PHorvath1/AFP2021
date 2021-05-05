@@ -38,6 +38,8 @@ public class HomeFragment extends Fragment  {
         myProfileCard = rootView.findViewById(R.id.home_my_profile_card);
         carListCard = rootView.findViewById(R.id.home_car_list_card);
 
+        Bundle bundle = new Bundle();
+        bundle.putInt("UserId",userId);
 
         //Click Listeners
 
@@ -45,8 +47,10 @@ public class HomeFragment extends Fragment  {
         carListCard.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                CarListFragment carListFragment = new CarListFragment();
+                carListFragment.setArguments(bundle);
                 try {
-                    getFragmentManager().beginTransaction().replace(R.id.fragment_container, new CarListFragment(), "NewFragmentTag").commit();
+                    getFragmentManager().beginTransaction().replace(R.id.fragment_container, carListFragment, "NewFragmentTag").commit();
                 }catch (Exception e){
                     System.out.println(e);
                 }
@@ -67,8 +71,6 @@ public class HomeFragment extends Fragment  {
         myProfileCard.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Bundle bundle = new Bundle();
-                bundle.putInt("UserId",userId);
                 MyProfileFragment myProfileFragment = new MyProfileFragment();
                 myProfileFragment.setArguments(bundle);
                 try {
