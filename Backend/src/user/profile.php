@@ -8,8 +8,8 @@
             $uid = $_GET['uid'];
             show($uid);
             break;
-        case 'UPDATE':
-            $uid = $_GET['uid'];
+        case 'PUT':
+            $uid = intval($_GET['uid']);
             $oldPassword = $_GET['oldPassword'];
             $newPassword = $_GET['newPassword'];
             changePassword($uid, $oldPassword, $newPassword);
@@ -38,6 +38,7 @@
         else {
             $response = "error";
         }
+        header('Content-Type: application/json');
         echo json_encode($response);
 
     }

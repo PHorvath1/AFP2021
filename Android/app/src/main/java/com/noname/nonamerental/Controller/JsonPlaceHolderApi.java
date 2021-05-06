@@ -40,4 +40,9 @@ public interface JsonPlaceHolderApi {
                             @Query("carId") int cid,
                             @Query("rental_time") Date date);
 
+    @PUT("user/profile.php")
+    Call<String> ChangePassword(@Query("uid") int id,
+                                      @Query("oldPassword") String oldPassword,
+                                      @Query("newPassword") String newPassword);
+
 }

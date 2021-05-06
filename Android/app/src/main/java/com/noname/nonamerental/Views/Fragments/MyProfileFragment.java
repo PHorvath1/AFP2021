@@ -4,7 +4,10 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -12,9 +15,7 @@ import androidx.fragment.app.Fragment;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
-import com.noname.nonamerental.Controller.CarListAdapter;
 import com.noname.nonamerental.Controller.JsonPlaceHolderApi;
-import com.noname.nonamerental.Model.CarResponse;
 import com.noname.nonamerental.Model.UserData;
 import com.noname.nonamerental.R;
 
@@ -32,6 +33,10 @@ public class MyProfileFragment extends Fragment {
     private TextView tvAddress;
     private TextView tvEmail;
     private TextView tvPhoneNumber;
+
+    private Button btnChangePassword;
+    private EditText inputCurrentPassword;
+    private EditText inputNewPassword;
 
     private static Gson gson = new GsonBuilder()
             .setLenient()
@@ -65,11 +70,24 @@ public class MyProfileFragment extends Fragment {
         tvEmail = view.findViewById(R.id.tv_user_email);
         tvPhoneNumber = view.findViewById(R.id.tv_user_phone);
 
+        inputCurrentPassword = view.findViewById(R.id.input_current_password);
+        inputNewPassword = view.findViewById(R.id.input_new_password);
+        btnChangePassword = view.findViewById(R.id.btn_change_password);
+
         try {
             showUser(userId);
         } catch (Exception e) {
             System.out.println(e.getMessage());
         }
+
+        btnChangePassword.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (inputCurrentPassword.getText().toString() != inputNewPassword.getText().toString()) {
+                    updatePassword(userId);
+                }
+            }
+        });
     }
 
     public void showUser(int uid) {
@@ -87,6 +105,27 @@ public class MyProfileFragment extends Fragment {
             @Override
             public void onFailure(Call<List<UserData>> call, Throwable t) {
                 System.out.println("Hiba az adatok lekérdezésekor...");
+            }
+        });
+    }
+
+    private void updatePassword(int uid) {
+        Call<String> status = jsonPlaceHolderApi.ChangePassword(uid, inputCurrentPassword.getText().toString(), inputNewPassword.getText().toString());
+        status.enqueue(new Callback<String>() {
+            @SneakyThrows
+            @Override
+            public void onResponse(Call<String> call, Response<String> response) {
+                Toast.makeText(getContext(),"Sikeres jelszóváltoztatás...", Toast.LENGTH_SHORT);
+                HomeFragment home = new HomeFragment();
+                Bundle bundle = new Bundle();
+                bundle.putInt("UserId",userId);
+                home.setArguments(bundle);
+                getFragmentManager().beginTransaction().replace(R.id.fragment_container, home, "HomeFragmentTag").commit();
+            }
+
+            @Override
+            public void onFailure(Call<String> call, Throwable t) {
+                System.out.println(t.getMessage());
             }
         });
     }
