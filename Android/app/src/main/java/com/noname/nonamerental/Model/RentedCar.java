@@ -8,8 +8,8 @@ import lombok.Data;
 @Data
 @AllArgsConstructor
 public class RentedCar {
-    private int cid;
     private int uid;
+    private int cid;
     private Date rental_time;
     private int rental_price;
 

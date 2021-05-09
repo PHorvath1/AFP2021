@@ -88,7 +88,7 @@ public class CarListFragment extends Fragment {
             @Override
             public void onResponse(Call<List<CarResponse>> call, Response<List<CarResponse>> response) {
                 cars = response.body();
-                carRecyclerView.setAdapter(new CarListAdapter(cars, getContext()));
+                carRecyclerView.setAdapter(new CarListAdapter(cars, getContext(), uid));
             }
 
             @Override
