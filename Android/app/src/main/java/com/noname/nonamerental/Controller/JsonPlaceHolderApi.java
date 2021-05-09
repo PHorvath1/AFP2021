@@ -2,6 +2,7 @@ package com.noname.nonamerental.Controller;
 
 import com.noname.nonamerental.Model.Car;
 import com.noname.nonamerental.Model.CarResponse;
+import com.noname.nonamerental.Model.RentalResponse;
 import com.noname.nonamerental.Model.RentedCar;
 import com.noname.nonamerental.Model.Status;
 import com.noname.nonamerental.Model.UserData;
@@ -34,6 +35,9 @@ public interface JsonPlaceHolderApi {
     @GET("cars/index.php")
     Call<List<Car>> GetCarInfo(@Query("uid") int id,
                          @Query("carId") int cid);
+
+    @GET("cars/rented.php")
+    Call<List<RentalResponse>> ListRentals(@Query("uid") int id);
 
     @PUT("cars/index.php")
     Call<RentedCar> RentCar(@Query("uid") int id,
