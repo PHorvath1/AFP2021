@@ -32,6 +32,7 @@ public class CarView extends AppCompatActivity {
 
     private List<Car> data;
     private RentedCar rentedCar;
+    private int uid;
     private int itemPosition;
     private Button btnRent;
     private Button btnBack;
@@ -62,6 +63,7 @@ public class CarView extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_carview);
         itemPosition = getIntent().getIntExtra("carId",1);
+        uid = getIntent().getIntExtra("uid", 1);
         ivCar = findViewById(R.id.ivCar);
         tvName = findViewById(R.id.tvCarName);
         tvDescription = findViewById(R.id.tvCarDescription);
@@ -72,7 +74,7 @@ public class CarView extends AppCompatActivity {
         btnBack = findViewById(R.id.btnBack);
         btnRent = findViewById(R.id.btnRentCar);
         try {
-            getCarInfo(1, itemPosition);
+            getCarInfo(uid, itemPosition);
 
         } catch (Exception e) {
             System.out.println(e.getMessage());
@@ -81,9 +83,10 @@ public class CarView extends AppCompatActivity {
         btnRent.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                rentedCar = new RentedCar(1, itemPosition, Date.valueOf(tdReturnDate.getText().toString()), Integer.parseInt(tvPrice.getText().toString()));
+                rentedCar = new RentedCar(uid, itemPosition, Date.valueOf(tdReturnDate.getText().toString()), Integer.parseInt(tvPrice.getText().toString()));
                 try{
-                    rentCar(rentedCar.getUid(), rentedCar.getCid(), rentedCar.getRental_time());
+                    rentCar(rentedCar);
+                    decreaseQuantity(rentedCar.getCid());
                 }
                 catch (Exception e){
                     System.out.println(e.getMessage());
@@ -113,7 +116,7 @@ public class CarView extends AppCompatActivity {
                 String temp = data.get(0).getBrand()+' '+data.get(0).getType();
                 tvName.setText(temp);
                 tvDescription.setText(data.get(0).getDescription());
-                tvPrice.setText(String.valueOf(data.get(0).getPrice()) + "Ft/nap");
+                tvPrice.setText(String.valueOf(data.get(0).getPrice()));
                 tvQuantity.setText("Elérhető: "+String.valueOf(data.get(0).getQuantity()));
                 tdRentDate.setText("From (YYYY-MM-DD)");
                 tdReturnDate.setText("To (YYYY-MM-DD)");
@@ -127,20 +130,35 @@ public class CarView extends AppCompatActivity {
         });
     }
 
-    public void rentCar(int uid, int cid, Date endDate){
-        Call<RentedCar> call = jsonPlaceHolderApi.RentCar(uid, cid, endDate);
-        call.enqueue(new Callback<RentedCar>() {
+    public void rentCar(RentedCar car){
+        Call<String> call = jsonPlaceHolderApi.RentCar(car);
+        call.enqueue(new Callback<String>() {
             @Override
-            public void onResponse(Call<RentedCar> call, Response<RentedCar> response) {
+            public void onResponse(Call<String> call, Response<String> response) {
                 if (response.isSuccessful())
-                    System.out.println("Success");
-                else
-                    System.out.println("Error");
+                    System.out.println(car);
+                    System.out.println(response.message());
             }
 
             @Override
-            public void onFailure(Call<RentedCar> call, Throwable t) {
+            public void onFailure(Call<String> call, Throwable t) {
                 System.out.println("Hiba a kölcsönzéskor: " + t.getMessage());
+            }
+        });
+    }
+
+    public void decreaseQuantity(int cid){
+        Call<String> call = jsonPlaceHolderApi.DecreaseQuantity(cid);
+        call.enqueue(new Callback<String>() {
+            @Override
+            public void onResponse(Call<String> call, Response<String> response) {
+                if (response.isSuccessful())
+                    System.out.println("Successful rent");
+            }
+
+            @Override
+            public void onFailure(Call<String> call, Throwable t) {
+                System.out.println("Hiba: " + t.getMessage());
             }
         });
     }

@@ -35,10 +35,11 @@ public interface JsonPlaceHolderApi {
     Call<List<Car>> GetCarInfo(@Query("uid") int id,
                          @Query("carId") int cid);
 
+    @POST("cars/index.php")
+    Call<String> RentCar(@Body RentedCar car);
+
     @PUT("cars/index.php")
-    Call<RentedCar> RentCar(@Query("uid") int id,
-                            @Query("carId") int cid,
-                            @Query("rental_time") Date date);
+    Call<String> DecreaseQuantity(@Query("carId") int cid);
 
     @PUT("user/profile.php")
     Call<String> ChangePassword(@Query("uid") int id,
