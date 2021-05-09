@@ -73,21 +73,26 @@
 
     }
 
-    function rentCar($uid, $carId, $rentTime) {
+    function rentCar() {
+        global $con;
+        $post_vars = json_decode(file_get_contents("php://input"),true);
+        $uid = intval($post_vars['uid']);
         if (empty($uid)) {
             $response = "Jelentkezzen be a funkció használatához!";
             echo json_encode($response);
             return;
         }
-
-        global $con;
-        $query = "UPDATE cars SET quantity = quantity-1 WHERE id=".$carId." AND quantity>0 LIMIT 1";
+        $carId = intval($post_vars['cid']);
+        $rentTime = $post_vars['rental_time'];
+        $price = intval($post_vars['rental_price']);
+        $dateNow = date('Y-m-d',time());
+        $rentDate = empty($rentTime) ? $dateNow : $rentTime;
+        $query = "INSERT INTO rented_cars (uid, cid, rental_time, rental_price) VALUES (".$uid.", ".$cid.", ".$rentDate.", ".$price.")";
         $response = "error";
         if (mysqli_query($con, $query)) {
-            if (moveToRentedCars($uid, $carId, $rentTime)) {
-                $response = "success";
-            }
+            $response = "success";
         }
+        header("Content-Type: application/json");
         echo json_encode($response);
     }
 
