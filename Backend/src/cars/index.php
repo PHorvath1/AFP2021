@@ -15,10 +15,13 @@
                 listAvaibleCars($uid);
             }
             break;
-        case 'UPDATE':
-            $uid = $_GET['uid'];
+        case 'PUT':
             $carId = $_GET['carId'];
-            rentCar($uid, $carId);
+            decreaseQuantity($carId);
+            break;
+        case 'POST':
+            rentCar();
+            break;
         default:
             break;
     }
