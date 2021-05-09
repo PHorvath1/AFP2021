@@ -96,28 +96,14 @@
         echo json_encode($response);
     }
 
-    function moveToRentedCars($uid, $carId, $rentTime) {
+    function decreaseQuantity($carId){
         global $con;
-        $dateNow = date('Y-m-d',time());
-        $rentDate = empty($rentTime) ? 1 : $rentTime;
-        $date = strtotime("+".$rentDate." days", $dateNow);
-        $price = getCarPrice($carId);
-        $query = "INSERT INTO rented_cars SET uid=".$uid.", cid=".$carId.", rental_time=".$date.", price=".$price/$rentTime;
+        $query = "UPDATE cars SET quantity = quantity-1 WHERE id=".$carId." AND quantity>0 LIMIT 1";
+        $response = "error";
         if (mysqli_query($con, $query)) {
-            return true;
+            $response = "success";
         }
-        return false;
+        header("Content-Type: application/json");
+        echo json_encode($response);
     }
-
-    function getCarPrice($carId) {
-        global $con;
-        $query = "SELECT price FROM cars WHERE id =".$carId;
-        $response = array();
-        $result = mysqli_query($con, $query);
-        while ($row=mysqli_fetch_array($result)) {
-            $response[] = $row;
-        }
-        return response['price'];
-    }
-    
 ?>
