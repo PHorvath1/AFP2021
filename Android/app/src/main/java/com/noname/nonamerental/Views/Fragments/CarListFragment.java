@@ -76,6 +76,8 @@ public class CarListFragment extends Fragment {
 
         try {
             listCars(userId);
+            //Ide kéne a belépett felhasználó azonosítója
+            listCars(35);
         } catch (Exception e) {
             System.out.println(e.getMessage());
         }
