@@ -22,6 +22,7 @@ import com.noname.nonamerental.R;
 import java.util.List;
 
 import lombok.Getter;
+import lombok.SneakyThrows;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -31,8 +32,6 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class MyRentalsFragment  extends Fragment {
 
-
-    @Getter
     private static RecyclerView rentalRecyclerView;
 
     private static Gson gson = new GsonBuilder()
@@ -48,6 +47,9 @@ public class MyRentalsFragment  extends Fragment {
 
     private static List<RentalResponse> rentals;
 
+    public static RecyclerView getRentalRecyclerView(){
+        return rentalRecyclerView;
+    }
 
     private int userId;
 
@@ -56,19 +58,19 @@ public class MyRentalsFragment  extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         //userId = getArguments().getInt("UserId");
-        View root = inflater.inflate(R.layout.fragment_myrentals,container,false);
-        return root;
+        return inflater.inflate(R.layout.fragment_myrentals,container,false);
+
     }
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        rentalRecyclerView = view.findViewById(R.id.myRentalRecyclerView);
+        rentalRecyclerView = (RecyclerView) view.findViewById(R.id.rentalRecyclerView);
         rentalRecyclerView.setLayoutManager(new LinearLayoutManager(view.getContext()));
 
         try {
-            listRentals(userId);
+            listRentals(35);
         }catch (Exception e){
             System.out.println(e.getMessage());
         }
@@ -76,15 +78,17 @@ public class MyRentalsFragment  extends Fragment {
     public void listRentals(int uid){
         Call<List<RentalResponse>> list = jsonPlaceHolderApi.ListRentals(uid);
         list.enqueue(new Callback<List<RentalResponse>>() {
+            @SneakyThrows
             @Override
             public void onResponse(Call<List<RentalResponse>> call, Response<List<RentalResponse>> response) {
+
                 rentals = response.body();
-                rentalRecyclerView.setAdapter(new RentalListAdapter(rentals,getContext()));
+                rentalRecyclerView.setAdapter(new RentalListAdapter(rentals, getContext()));
             }
 
             @Override
             public void onFailure(Call<List<RentalResponse>> call, Throwable t) {
-
+                System.out.println("Hiba a járművek lekérdezésekor...");
             }
         });
     }

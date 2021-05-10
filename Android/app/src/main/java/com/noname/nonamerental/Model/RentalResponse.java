@@ -8,6 +8,6 @@ import lombok.Getter;
 public class RentalResponse {
     private int uid;
     private int cid;
-    private String date;
-    private int rentalPrice;
+    private String rental_time;
+    private int rental_price;
 }

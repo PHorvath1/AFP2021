@@ -28,7 +28,43 @@
             android:layout_height="match_parent">
 
             <TextView
-                android:id="@+id/car_brand"
+                android:id="@+id/rental_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="22dp"
+                android:layout_marginLeft="22dp"
+                android:layout_marginEnd="331dp"
+                android:layout_marginRight="331dp"
+                tools:text="Price"
+                android:textColor="#000000"
+                android:textSize="22sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.626" />
+
+            <TextView
+                android:id="@+id/rental_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="22dp"
+                android:layout_marginLeft="22dp"
+                android:layout_marginEnd="331dp"
+                android:layout_marginRight="331dp"
+                android:textColor="#000000"
+                android:textSize="22sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.821"
+                tools:text="Date" />
+
+            <TextView
+                android:id="@+id/rented_car_brand"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="22dp"
@@ -46,7 +82,7 @@
                 tools:text="Car brand" />
 
             <TextView
-                android:id="@+id/car_model"
+                android:id="@+id/rented_car_model"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="24dp"
@@ -66,7 +102,7 @@
                 tools:text="Car model" />
 
             <ImageView
-                android:id="@+id/car_image"
+                android:id="@+id/rented_car_image"
                 android:layout_width="203dp"
                 android:layout_height="188dp"
                 android:layout_marginTop="13dp"
