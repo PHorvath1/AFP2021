@@ -3,8 +3,6 @@ package com.noname.nonamerental.Controller;
 import android.content.Intent;
 import android.view.View;
 
-import com.noname.nonamerental.Model.CarResponse;
-import com.noname.nonamerental.Views.CarList;
 import com.noname.nonamerental.Views.CarView;
 import com.noname.nonamerental.Views.Fragments.CarListFragment;
 
