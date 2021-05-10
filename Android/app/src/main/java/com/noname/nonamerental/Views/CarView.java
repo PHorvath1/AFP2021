@@ -83,7 +83,7 @@ public class CarView extends AppCompatActivity {
         btnRent.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                rentedCar = new RentedCar(uid, itemPosition, Date.valueOf(tdReturnDate.getText().toString()), Integer.parseInt(tvPrice.getText().toString()));
+                rentedCar = new RentedCar(uid, itemPosition, tdReturnDate.getText().toString(), Integer.parseInt(tvPrice.getText().toString()));
                 try{
                     rentCar(rentedCar);
                     decreaseQuantity(rentedCar.getCid());

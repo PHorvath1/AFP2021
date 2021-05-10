@@ -90,7 +90,7 @@
         $price = intval($post_vars['rental_price']);
         $dateNow = date('Y-m-d',time());
         $rentDate = empty($rentTime) ? $dateNow : $rentTime;
-        $query = "INSERT INTO rented_cars (uid, cid, rental_time, rental_price) VALUES (".$uid.", ".$cid.", ".$rentDate.", ".$price.")";
+        $query = "INSERT INTO rented_cars SET uid = ".$uid.", cid = ".$carId.", rental_time = '".$rentDate."', rental_price =".$price;
         $response = "error";
         if (mysqli_query($con, $query)) {
             $response = "success";
