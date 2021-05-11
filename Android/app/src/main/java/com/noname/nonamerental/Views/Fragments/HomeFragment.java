@@ -60,8 +60,10 @@ public class HomeFragment extends Fragment  {
         myRentalCard.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                MyRentalsFragment myRentalsFragment = new MyRentalsFragment();
+                myRentalsFragment.setArguments(bundle);
                 try {
-                    getFragmentManager().beginTransaction().replace(R.id.fragment_container, new MyRentalsFragment(), "NewFragmentTag").commit();
+                    getFragmentManager().beginTransaction().replace(R.id.fragment_container, myRentalsFragment, "NewFragmentTag").commit();
                 }catch (Exception e){
                     System.out.println(e);
                 }
