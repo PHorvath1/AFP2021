@@ -15,6 +15,8 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.noname.nonamerental.Model.RentalResponse;
 import com.noname.nonamerental.R;
 
+import org.w3c.dom.Text;
+
 import java.util.List;
 
 public class RentalListAdapter extends RecyclerView.Adapter<RentalListAdapter.RentalListViewHolder>{
@@ -39,14 +41,18 @@ public class RentalListAdapter extends RecyclerView.Adapter<RentalListAdapter.Re
     @Override
     public void onBindViewHolder(final RentalListAdapter.RentalListViewHolder holder, int position) {
         itemPosition = position;
-        String brand = String.valueOf(data.get(position).getCid());
-        String type = String.valueOf(data.get(position).getUid());
-        //int image = context.getResources().getIdentifier(data.get(position).getImage(),"mipmap", context.getPackageName());
+        String brand = String.valueOf(data.get(position).getBrand());
+        String type = String.valueOf(data.get(position).getType());
+        int image = context.getResources().getIdentifier(data.get(position).getImage(),"mipmap", context.getPackageName());
+        String time = String.valueOf(data.get(position).getRental_time());
+        String price = String.valueOf(data.get(position).getRental_price()) + "Ft";
 
 
         holder.carBrand.setText(brand);
         holder.carModel.setText(type);
-        //holder.carImage.setImageResource(image);
+        holder.carImage.setImageResource(image);
+        holder.rentalTime.setText(time);
+        holder.rentalPrice.setText(price);
     }
 
     @Override
@@ -58,12 +64,17 @@ public class RentalListAdapter extends RecyclerView.Adapter<RentalListAdapter.Re
         ImageView carImage;
         TextView carBrand;
         TextView carModel;
+        TextView rentalPrice;
+        TextView rentalTime;
 
         public RentalListViewHolder(@NonNull View itemView) {
             super(itemView);
-            //carImage = (ImageView) itemView.findViewById(R.id.recar_image);
+            carImage = (ImageView) itemView.findViewById(R.id.rented_car_image);
             carBrand = (TextView) itemView.findViewById(R.id.rented_car_brand);
             carModel = (TextView) itemView.findViewById(R.id.rented_car_model);
+            rentalPrice = (TextView) itemView.findViewById(R.id.rental_price);
+            rentalTime = (TextView) itemView.findViewById(R.id.rental_time);
+
         }
     }
 }

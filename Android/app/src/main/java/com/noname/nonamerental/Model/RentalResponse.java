@@ -6,8 +6,9 @@ import lombok.Getter;
 @AllArgsConstructor
 @Getter
 public class RentalResponse {
-    private int uid;
-    private int cid;
+    private String brand;
+    private String type;
+    private String image;
     private String rental_time;
     private int rental_price;
 }

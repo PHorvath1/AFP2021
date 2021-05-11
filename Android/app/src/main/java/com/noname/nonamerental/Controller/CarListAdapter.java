@@ -43,7 +43,7 @@ public class CarListAdapter extends RecyclerView.Adapter<CarListAdapter.CarListV
         String brand = data.get(position).getBrand();
         String type = data.get(position).getType();
         int image = context.getResources().getIdentifier(data.get(position).getImage(),"mipmap", context.getPackageName());
-        
+
         holder.carBrand.setText(brand);
         holder.carModel.setText(type);
         holder.carImage.setImageResource(image);
