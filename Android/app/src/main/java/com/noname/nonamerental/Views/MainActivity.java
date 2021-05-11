@@ -30,6 +30,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     public HomeFragment myHomeFragment;
     private MyProfileFragment myProfileFragment;
     private CarListFragment carListFragment;
+    private MyRentalsFragment rentalsFragment;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,12 +44,16 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         //Pre building fragments with data
         Bundle bundle = new Bundle();
         bundle.putInt("UserId",userId);
+        Bundle bundle2 = new Bundle();
+        bundle2.putInt("UserId",userId);
         myHomeFragment = new HomeFragment();
         myHomeFragment.setArguments(bundle);
         myProfileFragment = new MyProfileFragment();
         myProfileFragment.setArguments(bundle);
         carListFragment = new CarListFragment();
         carListFragment.setArguments(bundle);
+        rentalsFragment = new MyRentalsFragment();
+        rentalsFragment.setArguments(bundle);
 
         //Toolbar declaration
         toolbar = findViewById(R.id.toolbar);
@@ -87,7 +92,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, myProfileFragment).commit();
                 break;
             case R.id.nav_my_rentals:
-                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new MyRentalsFragment()).commit();
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, rentalsFragment).commit();
                 break;
             case R.id.nav_car_list:
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, carListFragment).commit();

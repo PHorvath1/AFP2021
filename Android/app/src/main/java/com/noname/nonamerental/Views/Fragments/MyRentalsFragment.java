@@ -45,26 +45,30 @@ public class MyRentalsFragment  extends Fragment {
 
     private static List<RentalResponse> rentalsResponse;
 
+    private int userId;
+
     public static RecyclerView getRentalRecyclerView(){
         return rentalRecyclerView;
     }
 
-    private int userId;
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        //userId = getArguments().getInt("UserId");
+        userId = getArguments().getInt("UserId");
+
         return inflater.inflate(R.layout.fragment_myrentals,container,false);
     }
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+
+
         rentalRecyclerView = (RecyclerView) view.findViewById(R.id.rentalRecyclerView);
         rentalRecyclerView.setLayoutManager(new LinearLayoutManager(view.getContext()));
         try {
-            listRentals(35);
+            listRentals(userId);
         }catch (Exception e){
             System.out.println(e.getMessage());
         }
