@@ -20,11 +20,14 @@ import java.util.List;
 public class CarListAdapter extends RecyclerView.Adapter<CarListAdapter.CarListViewHolder> {
     private List<CarResponse> data;
     private int itemPosition;
+    private int uid;
     private Context context;
-    private final View.OnClickListener carOnClickListener = new CarOnClickListener();
-    public CarListAdapter(List<CarResponse> data, Context context) {
+    private View.OnClickListener carOnClickListener;
+    public CarListAdapter(List<CarResponse> data, Context context, int uid) {
         this.data = data;
         this.context = context;
+        this.uid = uid;
+        carOnClickListener = new CarOnClickListener(uid);
     }
 
     @NonNull
