@@ -5,7 +5,7 @@
     $requestMethod = $_SERVER['REQUEST_METHOD'];
     switch ($requestMethod) {
         case 'POST':
-            rate($uid, $rating);
+            rate();
             break;
         
         default:
@@ -13,12 +13,12 @@
     }
 
 
-    function rate($uid, $rating){
-
+    function rate(){
         global $con;
         $post_vars = json_decode(file_get_contents("php://input"),true);
-        $rating = $post_vars['rating'];
-        $query = "INSERT INTO ratings SET uid=".$_GET['id']." AND rating=".$rating;
+        $rating = intval($post_vars['rating']);
+        $uid = intval($post_vars['uid']);
+        $query = "INSERT INTO ratings SET uid=".$uid.", rating=".$rating;
         if (mysqli_query($con, $query)) {
             $response = "Sikeres értékelés";
         } else {

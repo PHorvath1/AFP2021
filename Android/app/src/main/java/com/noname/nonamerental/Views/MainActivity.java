@@ -32,13 +32,15 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     private CarListFragment carListFragment;
     private MyRentalsFragment rentalsFragment;
 
+    private int userId;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
         //USER ID
-        final int userId = getIntent().getIntExtra("UserId",-1);
+        userId = getIntent().getIntExtra("UserId",-1);
 
 
         //Pre building fragments with data
@@ -98,7 +100,9 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, carListFragment).commit();
                 break;
             case R.id.nav_logout:
-                startActivity(new Intent(MainActivity.this,Login.class));
+                Intent intent = new Intent(MainActivity.this,Rate.class);
+                intent.putExtra("uid", userId);
+                startActivity(intent);
                 break;
         }
         drawer.closeDrawer(GravityCompat.START);

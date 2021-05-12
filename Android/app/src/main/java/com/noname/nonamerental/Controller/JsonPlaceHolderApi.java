@@ -2,6 +2,7 @@ package com.noname.nonamerental.Controller;
 
 import com.noname.nonamerental.Model.Car;
 import com.noname.nonamerental.Model.CarResponse;
+import com.noname.nonamerental.Model.RateData;
 import com.noname.nonamerental.Model.RentalResponse;
 import com.noname.nonamerental.Model.RentedCar;
 import com.noname.nonamerental.Model.Status;
@@ -49,5 +50,8 @@ public interface JsonPlaceHolderApi {
     Call<String> ChangePassword(@Query("uid") int id,
                                       @Query("oldPassword") String oldPassword,
                                       @Query("newPassword") String newPassword);
+
+    @POST("ratings/rating.php")
+    Call<String> Rate(@Body RateData rate);
 
 }
