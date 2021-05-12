@@ -22,11 +22,14 @@ import java.util.List;
 public class RentalListAdapter extends RecyclerView.Adapter<RentalListAdapter.RentalListViewHolder>{
     private List<RentalResponse> data;
     private int itemPosition;
+    private int uid;
     private Context context;
-    private final View.OnClickListener carOnClickListener = new CarOnClickListener();
-    public RentalListAdapter(List<RentalResponse> data, Context context) {
+    private View.OnClickListener carOnClickListener;
+    public RentalListAdapter(List<RentalResponse> data, Context context, int uid) {
         this.data = data;
         this.context = context;
+        this.uid = uid;
+        carOnClickListener = new CarOnClickListener(uid);
     }
 
     @NonNull

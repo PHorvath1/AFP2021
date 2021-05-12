@@ -81,7 +81,7 @@ public class MyRentalsFragment  extends Fragment {
             @Override
             public void onResponse(Call<List<RentalResponse>> call, Response<List<RentalResponse>> response) {
                rentalsResponse = response.body();
-               rentalRecyclerView.setAdapter(new RentalListAdapter(rentalsResponse, getContext()));
+               rentalRecyclerView.setAdapter(new RentalListAdapter(rentalsResponse, getContext(), userId));
             }
             @Override
             public void onFailure(Call<List<RentalResponse>> call, Throwable t) {
