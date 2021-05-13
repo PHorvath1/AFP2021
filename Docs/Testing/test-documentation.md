@@ -37,3 +37,22 @@ Tesztszám | Rövid leírás | Várt eredmény | Eredmény | Megjegyzés
 08 | Értékelés értéke | A felhasználó csak 1 értéket tud kiválasztani | A felhasználó csak 1 értéket tudott kiválasztani | Nincs megjegyzés
 09 | Értékelés | A felhasználó által elküldött értékelés sikeres | A felhasználó sikeresen értékelni tudja az alkalmazást | Nincs megjegyzés 
 
+
+### Tesztelő Csattos Bence
+
+### Tesztelés dátuma: 2021. 05. 13.
+
+### Tesztelés végrehajtva a következő Android emulátoron: Google Pixel 3
+### Tesztelés végrehajtva a következő Android verzión: Android 11
+
+Tesztszám | Rövid leírás | Várt eredmény | Eredmény | Megjegyzés
+----------|--------------|---------------|----------|-----------
+01 | Regisztráció jelszó megadás nélkül | Sikertelen regisztráció | Az alkalmazás nem jelzi a hibát,de nem is regisztráltat | Nincs megjegyzés
+02 | Regisztráció helyes adatokkal | Sikeres regisztráció | Az alkalmazás regisztrál, majd visszavisz a bejelentkező oldalra | Funkció megfelelően működik
+03 | Bejelentkezés Backend Server kapcsolat nélkül | Sikertelen bejelentkezés | Nem jelentkeztet be az alkalmazás | Funkció megfelelően működik
+04 | Főmenü és főmenü navigáció | Navigáció helyes működése, Főmenü helyes megjelenítése| Főmenü navigáció helyesen működik, főmenü megjelenítése helyes | Nincs megjegyzés
+05 | Kikölcsönzött autók nézet megtekintése adatokkal | Felhasználó által kibérelt autók megjelenítése| Sikeres kilistázás, a felhasználó által kibérelt autók kerülnek megjelenítésre  | Funkció megfelelően működik
+06 | Kikölcsönzés adat megadás nélkül | Nem sikerül a bérlés | A jármű nem került a kibérelt autókhoz | A felhasználó nem kap semmilyen visszajelzést
+07 | Navigációs menü| Helyes navigáció | Megfelelően működik, mindig a helyes menüpontra továbbít. | nincs megjegyzés
+08 | Kijelentkezés | Sikeres kijelentkezés | A program sikeresen kijelentkeztet | Nincs megjegyzés
+
