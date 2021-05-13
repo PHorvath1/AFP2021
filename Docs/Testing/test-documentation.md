@@ -18,3 +18,22 @@ Tesztszám | Rövid leírás | Várt eredmény | Eredmény | Megjegyzés
 07 | Járművek szűrése | Nem sikerül a szűrés | Nem változott a kilistázott autók száma/sorrendje | A funkció ezekhez a gombokhoz végül nem készült el
 08 | Kijelentkezés | Sikeres kijelentkezés | A program sikeresen kijelentkeztet | Nincs megjegyzés
 
+
+### Tesztelő Horváth Krisztián
+
+### Tesztelés dátuma: 2021. 05. 13.
+
+### Tesztelés végrehajtva a következő Android verzión: Android 9.0
+
+Tesztszám | Rövid leírás | Várt eredmény | Eredmény | Megjegyzés
+----------|--------------|---------------|----------|-----------
+01 | Bejelentkezés létező fiókkal | A bejelentkezés sikeres | A bejelentkezés sikeresen megtörténik | Funkció megfelelően működik
+02 | Járművek kilistázása | Megjelennek a járművek | Megjelentek az elérhető járművek | Nincs megjegyzés
+03 | Jármű megtekintése | A kiválasztott jármű adatai megjelennek | A kiválasztott jármű adatai megjelentek | Nincs megjegyzés
+04 | Kikölcsönzés nézetből visszalépés | Visszalépünk a fő oldalra | A vissza gomb megnyomásakor vissza kerülünk a főoldalra | A vissza gomb megnyomásakor a járművek kilistázásának kéne megjelenni
+05 | Saját adatok megtekintése | Megjelennek a felhasználó saját adatai | A felhasználó adatai sikeresen megjelentek | Nincs megjegyzés
+06 | Jelszó változtatás | A felhasználó jelszava megváltozik | A jelszó sikeresen megváltozik | Nincs megjegyzés
+07 | Kikölcsönzés megadott adatokkal | A kikölcsönzött jármű megjelenik a saját kikölcsönzésekben | A kikölcsönzött jármű megjelent a kikölcsönzésekben | Nincs megjegyzés
+08 | Értékelés értéke | A felhasználó csak 1 értéket tud kiválasztani | A felhasználó csak 1 értéket tudott kiválasztani | Nincs megjegyzés
+09 | Értékelés | A felhasználó által elküldött értékelés sikeres | A felhasználó sikeresen értékelni tudja az alkalmazást | Nincs megjegyzés 
+
