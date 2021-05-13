@@ -97,7 +97,9 @@ public class CarView extends AppCompatActivity {
         btnBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(CarView.this, MainActivity.class));
+                Intent intent = new Intent(CarView.this, MainActivity.class);
+                intent.putExtra("UserId", uid);
+                startActivity(intent);
             }
         });
 
